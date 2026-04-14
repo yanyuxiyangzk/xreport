@@ -1,0 +1,306 @@
+{
+  "nodes": [
+    {
+      "id": "CLAUDE.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "CLAUDE.md",
+      "extension": ".md",
+      "line_count": 115,
+      "path": "CLAUDE.md"
+    },
+    {
+      "id": "harness-context.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "harness-context.md",
+      "extension": ".md",
+      "line_count": 100,
+      "path": "harness-context.md"
+    },
+    {
+      "id": "index.html",
+      "type": "file",
+      "file_type": "web",
+      "name": "index.html",
+      "extension": ".html",
+      "line_count": 12,
+      "path": "index.html"
+    },
+    {
+      "id": "package-lock.json",
+      "type": "file",
+      "file_type": "config",
+      "name": "package-lock.json",
+      "extension": ".json",
+      "line_count": 5468,
+      "path": "package-lock.json"
+    },
+    {
+      "id": "package.json",
+      "type": "file",
+      "file_type": "config",
+      "name": "package.json",
+      "extension": ".json",
+      "line_count": 46,
+      "path": "package.json"
+    },
+    {
+      "id": "RULES.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "RULES.md",
+      "extension": ".md",
+      "line_count": 96,
+      "path": "RULES.md"
+    },
+    {
+      "id": "tsconfig.json",
+      "type": "file",
+      "file_type": "config",
+      "name": "tsconfig.json",
+      "extension": ".json",
+      "line_count": 21,
+      "path": "tsconfig.json"
+    },
+    {
+      "id": "tsconfig.node.json",
+      "type": "file",
+      "file_type": "config",
+      "name": "tsconfig.node.json",
+      "extension": ".json",
+      "line_count": 10,
+      "path": "tsconfig.node.json"
+    },
+    {
+      "id": "vite.config.ts",
+      "type": "file",
+      "file_type": "code",
+      "name": "vite.config.ts",
+      "extension": ".ts",
+      "line_count": 24,
+      "path": "vite.config.ts"
+    },
+    {
+      "id": "src/App.css",
+      "type": "file",
+      "file_type": "web",
+      "name": "App.css",
+      "extension": ".css",
+      "line_count": 1203,
+      "path": "src/App.css"
+    },
+    {
+      "id": "src/App.tsx",
+      "type": "file",
+      "file_type": "code",
+      "name": "App.tsx",
+      "extension": ".tsx",
+      "line_count": 157,
+      "path": "src/App.tsx"
+    },
+    {
+      "id": "src/main.tsx",
+      "type": "file",
+      "file_type": "code",
+      "name": "main.tsx",
+      "extension": ".tsx",
+      "line_count": 10,
+      "path": "src/main.tsx"
+    },
+    {
+      "id": "src/hooks/useHistory.test.ts",
+      "type": "file",
+      "file_type": "code",
+      "name": "useHistory.test.ts",
+      "extension": ".ts",
+      "line_count": 120,
+      "path": "src/hooks/useHistory.test.ts"
+    },
+    {
+      "id": "src/hooks/useHistory.ts",
+      "type": "file",
+      "file_type": "code",
+      "name": "useHistory.ts",
+      "extension": ".ts",
+      "line_count": 44,
+      "path": "src/hooks/useHistory.ts"
+    },
+    {
+      "id": "src/hooks/useReportList.test.ts",
+      "type": "file",
+      "file_type": "code",
+      "name": "useReportList.test.ts",
+      "extension": ".ts",
+      "line_count": 137,
+      "path": "src/hooks/useReportList.test.ts"
+    },
+    {
+      "id": "src/hooks/useReportList.ts",
+      "type": "file",
+      "file_type": "code",
+      "name": "useReportList.ts",
+      "extension": ".ts",
+      "line_count": 66,
+      "path": "src/hooks/useReportList.ts"
+    },
+    {
+      "id": "src/test/setup.ts",
+      "type": "file",
+      "file_type": "code",
+      "name": "setup.ts",
+      "extension": ".ts",
+      "line_count": 22,
+      "path": "src/test/setup.ts"
+    },
+    {
+      "id": "src/types/index.ts",
+      "type": "file",
+      "file_type": "code",
+      "name": "index.ts",
+      "extension": ".ts",
+      "line_count": 75,
+      "path": "src/types/index.ts"
+    },
+    {
+      "id": "src/components/designer/ReportDesigner.test.tsx",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportDesigner.test.tsx",
+      "extension": ".tsx",
+      "line_count": 222,
+      "path": "src/components/designer/ReportDesigner.test.tsx"
+    },
+    {
+      "id": "src/components/designer/ReportDesigner.tsx",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportDesigner.tsx",
+      "extension": ".tsx",
+      "line_count": 820,
+      "path": "src/components/designer/ReportDesigner.tsx"
+    },
+    {
+      "id": "src/components/designer/ReportSettingsModal.tsx",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportSettingsModal.tsx",
+      "extension": ".tsx",
+      "line_count": 67,
+      "path": "src/components/designer/ReportSettingsModal.tsx"
+    },
+    {
+      "id": "src/components/exporter/ReportExporter.tsx",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportExporter.tsx",
+      "extension": ".tsx",
+      "line_count": 302,
+      "path": "src/components/exporter/ReportExporter.tsx"
+    },
+    {
+      "id": "src/components/home/ReportList.test.tsx",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportList.test.tsx",
+      "extension": ".tsx",
+      "line_count": 178,
+      "path": "src/components/home/ReportList.test.tsx"
+    },
+    {
+      "id": "src/components/home/ReportList.tsx",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportList.tsx",
+      "extension": ".tsx",
+      "line_count": 77,
+      "path": "src/components/home/ReportList.tsx"
+    },
+    {
+      "id": "src/components/renderer/ReportRenderer.test.tsx",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportRenderer.test.tsx",
+      "extension": ".tsx",
+      "line_count": 200,
+      "path": "src/components/renderer/ReportRenderer.test.tsx"
+    },
+    {
+      "id": "src/components/renderer/ReportRenderer.tsx",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportRenderer.tsx",
+      "extension": ".tsx",
+      "line_count": 322,
+      "path": "src/components/renderer/ReportRenderer.tsx"
+    }
+  ],
+  "edges": [
+    {
+      "source": "package.json",
+      "target": "dep:chart.js",
+      "type": "depends_on"
+    },
+    {
+      "source": "package.json",
+      "target": "dep:jspdf",
+      "type": "depends_on"
+    },
+    {
+      "source": "package.json",
+      "target": "dep:react",
+      "type": "depends_on"
+    },
+    {
+      "source": "package.json",
+      "target": "dep:react-chartjs-2",
+      "type": "depends_on"
+    },
+    {
+      "source": "package.json",
+      "target": "dep:react-dom",
+      "type": "depends_on"
+    },
+    {
+      "source": "package.json",
+      "target": "dep:uuid",
+      "type": "depends_on"
+    },
+    {
+      "source": "package.json",
+      "target": "dep:xlsx",
+      "type": "depends_on"
+    },
+    {
+      "source": "package.json",
+      "target": "dep:@testing-library/jest-dom",
+      "type": "depends_on"
+    },
+    {
+      "source": "package.json",
+      "target": "dep:@testing-library/react",
+      "type": "depends_on"
+    },
+    {
+      "source": "package.json",
+      "target": "dep:@types/react",
+      "type": "depends_on"
+    }
+  ],
+  "metadata": {
+    "project": "D:\\project\\aicoding\\XReport",
+    "project_name": "XReport",
+    "analyzed_at": "2026-04-14T22:00:36.864884",
+    "stats": {
+      "total_files": 26,
+      "code_files": 17,
+      "doc_files": 3,
+      "config_files": 4,
+      "total_lines": 9914,
+      "languages": {
+        "TypeScript": 7,
+        "TypeScript (TSX)": 10
+      }
+    }
+  }
+}
