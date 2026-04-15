@@ -1,7 +1,6 @@
 package com.xreport.service.report.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.xreport.common.exception.BusinessException;
 import com.xreport.mapper.report.LuckysheetReportCellMapper;
 import com.xreport.pojo.entity.LuckysheetReportCell;
 import com.xreport.service.report.ILuckysheetReportCellService;
@@ -26,11 +25,7 @@ public class LuckysheetReportCellServiceImpl implements ILuckysheetReportCellSer
         wrapper.eq(LuckysheetReportCell::getTplId, tplId)
                .eq(LuckysheetReportCell::getSheetId, sheetId)
                .eq(LuckysheetReportCell::getDelFlag, 0);
-        LuckysheetReportCell cell = cellMapper.selectOne(wrapper);
-        if (cell == null) {
-            throw new BusinessException("单元格数据不存在");
-        }
-        return cell;
+        return cellMapper.selectOne(wrapper);
     }
 
     @Override
@@ -59,6 +54,27 @@ public class LuckysheetReportCellServiceImpl implements ILuckysheetReportCellSer
             cell.setCreateTime(LocalDateTime.now());
             cell.setUpdateTime(LocalDateTime.now());
             cellMapper.insert(cell);
+        }
+    }
+
+    @Override
+    @Transactional
+    public void batchSaveCellData(Long tplId, Long sheetId, String cellData) {
+        saveCellData(tplId, sheetId, cellData);
+    }
+
+    @Override
+    @Transactional
+    public void deleteBySheetId(Long tplId, Long sheetId) {
+        LambdaQueryWrapper<LuckysheetReportCell> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(LuckysheetReportCell::getTplId, tplId)
+               .eq(LuckysheetReportCell::getSheetId, sheetId)
+               .eq(LuckysheetReportCell::getDelFlag, 0);
+        LuckysheetReportCell existing = cellMapper.selectOne(wrapper);
+        if (existing != null) {
+            existing.setDelFlag(1);
+            existing.setUpdateTime(LocalDateTime.now());
+            cellMapper.updateById(existing);
         }
     }
 }

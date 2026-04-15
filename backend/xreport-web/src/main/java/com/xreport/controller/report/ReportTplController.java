@@ -2,6 +2,8 @@ package com.xreport.controller.report;
 
 import com.github.pagehelper.PageInfo;
 import com.xreport.common.result.Result;
+import com.xreport.pojo.dto.FullTemplateResponse;
+import com.xreport.pojo.dto.FullTemplateSaveRequest;
 import com.xreport.pojo.dto.ReportTplDto;
 import com.xreport.pojo.entity.ReportTpl;
 import com.xreport.service.report.IReportTplService;
@@ -104,5 +106,16 @@ public class ReportTplController {
     @GetMapping("/{id}/preview")
     public Result<Map<String, Object>> preview(@PathVariable Long id) {
         return Result.ok(renderService.previewReport(id));
+    }
+
+    @PostMapping("/full")
+    public Result<Long> saveFullTemplate(@RequestBody FullTemplateSaveRequest request) {
+        Long tplId = tplService.saveFullTemplate(request);
+        return Result.ok(tplId);
+    }
+
+    @GetMapping("/full/{tplId}")
+    public Result<FullTemplateResponse> loadFullTemplate(@PathVariable Long tplId) {
+        return Result.ok(tplService.loadFullTemplate(tplId));
     }
 }

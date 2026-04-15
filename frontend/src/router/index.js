@@ -54,6 +54,18 @@ const routes = [
     ]
   },
   {
+    path: '/datasource',
+    name: 'Datasource',
+    children: [
+      {
+        path: 'list',
+        name: 'DatasourceList',
+        component: () => import('@/views/datasource/List.vue'),
+        meta: { title: '数据源管理' }
+      }
+    ]
+  },
+  {
     path: '/share',
     name: 'Share',
     children: [
