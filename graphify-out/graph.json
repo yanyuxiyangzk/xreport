@@ -1,6 +1,15 @@
 {
   "nodes": [
     {
+      "id": "autonomous_driver_report.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "autonomous_driver_report.md",
+      "extension": ".md",
+      "line_count": 24,
+      "path": "autonomous_driver_report.md"
+    },
+    {
       "id": "CLAUDE.md",
       "type": "file",
       "file_type": "doc",
@@ -8,6 +17,15 @@
       "extension": ".md",
       "line_count": 115,
       "path": "CLAUDE.md"
+    },
+    {
+      "id": "enforcement_report.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "enforcement_report.md",
+      "extension": ".md",
+      "line_count": 21,
+      "path": "enforcement_report.md"
     },
     {
       "id": "harness-context.md",
@@ -55,6 +73,15 @@
       "path": "RULES.md"
     },
     {
+      "id": "task_queue.json",
+      "type": "file",
+      "file_type": "config",
+      "name": "task_queue.json",
+      "extension": ".json",
+      "line_count": 142,
+      "path": "task_queue.json"
+    },
+    {
       "id": "tsconfig.json",
       "type": "file",
       "file_type": "config",
@@ -80,6 +107,258 @@
       "extension": ".ts",
       "line_count": 24,
       "path": "vite.config.ts"
+    },
+    {
+      "id": "backend/docker-compose.yml",
+      "type": "file",
+      "file_type": "config",
+      "name": "docker-compose.yml",
+      "extension": ".yml",
+      "line_count": 39,
+      "path": "backend/docker-compose.yml"
+    },
+    {
+      "id": "backend/Dockerfile",
+      "type": "file",
+      "file_type": "other",
+      "name": "Dockerfile",
+      "extension": "",
+      "line_count": 12,
+      "path": "backend/Dockerfile"
+    },
+    {
+      "id": "backend/PHASE_1_input.txt",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_1_input.txt",
+      "extension": ".txt",
+      "line_count": 1,
+      "path": "backend/PHASE_1_input.txt"
+    },
+    {
+      "id": "backend/PHASE_1_prompt.txt",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_1_prompt.txt",
+      "extension": ".txt",
+      "line_count": 672,
+      "path": "backend/PHASE_1_prompt.txt"
+    },
+    {
+      "id": "backend/pom.xml",
+      "type": "file",
+      "file_type": "other",
+      "name": "pom.xml",
+      "extension": ".xml",
+      "line_count": 165,
+      "path": "backend/pom.xml"
+    },
+    {
+      "id": "backend/run_phase1.cmd",
+      "type": "file",
+      "file_type": "other",
+      "name": "run_phase1.cmd",
+      "extension": ".cmd",
+      "line_count": 5,
+      "path": "backend/run_phase1.cmd"
+    },
+    {
+      "id": "docs/PHASE_0_execute.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_0_execute.md",
+      "extension": ".md",
+      "line_count": 22,
+      "path": "docs/PHASE_0_execute.md"
+    },
+    {
+      "id": "docs/PHASE_0_task.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_0_task.md",
+      "extension": ".md",
+      "line_count": 432,
+      "path": "docs/PHASE_0_task.md"
+    },
+    {
+      "id": "docs/PHASE_1_task.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_1_task.md",
+      "extension": ".md",
+      "line_count": 365,
+      "path": "docs/PHASE_1_task.md"
+    },
+    {
+      "id": "docs/PHASE_2_STATUS.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_2_STATUS.md",
+      "extension": ".md",
+      "line_count": 113,
+      "path": "docs/PHASE_2_STATUS.md"
+    },
+    {
+      "id": "docs/PHASE_2_task.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_2_task.md",
+      "extension": ".md",
+      "line_count": 290,
+      "path": "docs/PHASE_2_task.md"
+    },
+    {
+      "id": "docs/PHASE_3_STATUS.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_3_STATUS.md",
+      "extension": ".md",
+      "line_count": 97,
+      "path": "docs/PHASE_3_STATUS.md"
+    },
+    {
+      "id": "docs/PHASE_4_STATUS.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_4_STATUS.md",
+      "extension": ".md",
+      "line_count": 87,
+      "path": "docs/PHASE_4_STATUS.md"
+    },
+    {
+      "id": "docs/PHASE_5_STATUS.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_5_STATUS.md",
+      "extension": ".md",
+      "line_count": 98,
+      "path": "docs/PHASE_5_STATUS.md"
+    },
+    {
+      "id": "docs/PHASE_6_STATUS.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_6_STATUS.md",
+      "extension": ".md",
+      "line_count": 75,
+      "path": "docs/PHASE_6_STATUS.md"
+    },
+    {
+      "id": "docs/PHASE_7_STATUS.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_7_STATUS.md",
+      "extension": ".md",
+      "line_count": 122,
+      "path": "docs/PHASE_7_STATUS.md"
+    },
+    {
+      "id": "docs/PHASE_8_STATUS.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "PHASE_8_STATUS.md",
+      "extension": ".md",
+      "line_count": 161,
+      "path": "docs/PHASE_8_STATUS.md"
+    },
+    {
+      "id": "docs/TASK_phase-2_2026-04-15_13-36-02.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "TASK_phase-2_2026-04-15_13-36-02.md",
+      "extension": ".md",
+      "line_count": 43,
+      "path": "docs/TASK_phase-2_2026-04-15_13-36-02.md"
+    },
+    {
+      "id": "docs/TASK_phase-3_2026-04-15_13-50-40.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "TASK_phase-3_2026-04-15_13-50-40.md",
+      "extension": ".md",
+      "line_count": 43,
+      "path": "docs/TASK_phase-3_2026-04-15_13-50-40.md"
+    },
+    {
+      "id": "docs/TASK_phase-4_2026-04-15_13-55-32.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "TASK_phase-4_2026-04-15_13-55-32.md",
+      "extension": ".md",
+      "line_count": 43,
+      "path": "docs/TASK_phase-4_2026-04-15_13-55-32.md"
+    },
+    {
+      "id": "docs/TASK_phase-5_2026-04-15_14-01-55.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "TASK_phase-5_2026-04-15_14-01-55.md",
+      "extension": ".md",
+      "line_count": 43,
+      "path": "docs/TASK_phase-5_2026-04-15_14-01-55.md"
+    },
+    {
+      "id": "docs/TASK_phase-6_2026-04-15_14-08-44.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "TASK_phase-6_2026-04-15_14-08-44.md",
+      "extension": ".md",
+      "line_count": 43,
+      "path": "docs/TASK_phase-6_2026-04-15_14-08-44.md"
+    },
+    {
+      "id": "docs/TASK_phase-7_2026-04-15_14-18-37.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "TASK_phase-7_2026-04-15_14-18-37.md",
+      "extension": ".md",
+      "line_count": 43,
+      "path": "docs/TASK_phase-7_2026-04-15_14-18-37.md"
+    },
+    {
+      "id": "docs/TASK_phase-8_2026-04-15_14-26-34.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "TASK_phase-8_2026-04-15_14-26-34.md",
+      "extension": ".md",
+      "line_count": 43,
+      "path": "docs/TASK_phase-8_2026-04-15_14-26-34.md"
+    },
+    {
+      "id": "frontend/index.html",
+      "type": "file",
+      "file_type": "web",
+      "name": "index.html",
+      "extension": ".html",
+      "line_count": 13,
+      "path": "frontend/index.html"
+    },
+    {
+      "id": "frontend/package-lock.json",
+      "type": "file",
+      "file_type": "config",
+      "name": "package-lock.json",
+      "extension": ".json",
+      "line_count": 2530,
+      "path": "frontend/package-lock.json"
+    },
+    {
+      "id": "frontend/package.json",
+      "type": "file",
+      "file_type": "config",
+      "name": "package.json",
+      "extension": ".json",
+      "line_count": 32,
+      "path": "frontend/package.json"
+    },
+    {
+      "id": "frontend/vite.config.js",
+      "type": "file",
+      "file_type": "code",
+      "name": "vite.config.js",
+      "extension": ".js",
+      "line_count": 26,
+      "path": "frontend/vite.config.js"
     },
     {
       "id": "src/App.css",
@@ -233,6 +512,2688 @@
       "extension": ".tsx",
       "line_count": 322,
       "path": "src/components/renderer/ReportRenderer.tsx"
+    },
+    {
+      "id": "frontend/src/App.vue",
+      "type": "file",
+      "file_type": "other",
+      "name": "App.vue",
+      "extension": ".vue",
+      "line_count": 28,
+      "path": "frontend/src/App.vue"
+    },
+    {
+      "id": "frontend/src/main.js",
+      "type": "file",
+      "file_type": "code",
+      "name": "main.js",
+      "extension": ".js",
+      "line_count": 24,
+      "path": "frontend/src/main.js"
+    },
+    {
+      "id": "frontend/src/api/dashboard.js",
+      "type": "file",
+      "file_type": "code",
+      "name": "dashboard.js",
+      "extension": ".js",
+      "line_count": 74,
+      "path": "frontend/src/api/dashboard.js"
+    },
+    {
+      "id": "frontend/src/api/report.js",
+      "type": "file",
+      "file_type": "code",
+      "name": "report.js",
+      "extension": ".js",
+      "line_count": 174,
+      "path": "frontend/src/api/report.js"
+    },
+    {
+      "id": "frontend/src/api/share.js",
+      "type": "file",
+      "file_type": "code",
+      "name": "share.js",
+      "extension": ".js",
+      "line_count": 74,
+      "path": "frontend/src/api/share.js"
+    },
+    {
+      "id": "frontend/src/router/index.js",
+      "type": "file",
+      "file_type": "code",
+      "name": "index.js",
+      "extension": ".js",
+      "line_count": 81,
+      "path": "frontend/src/router/index.js"
+    },
+    {
+      "id": "frontend/src/views/dashboard/Designer.vue",
+      "type": "file",
+      "file_type": "other",
+      "name": "Designer.vue",
+      "extension": ".vue",
+      "line_count": 682,
+      "path": "frontend/src/views/dashboard/Designer.vue"
+    },
+    {
+      "id": "frontend/src/views/dashboard/List.vue",
+      "type": "file",
+      "file_type": "other",
+      "name": "List.vue",
+      "extension": ".vue",
+      "line_count": 300,
+      "path": "frontend/src/views/dashboard/List.vue"
+    },
+    {
+      "id": "frontend/src/views/dashboard/Preview.vue",
+      "type": "file",
+      "file_type": "other",
+      "name": "Preview.vue",
+      "extension": ".vue",
+      "line_count": 298,
+      "path": "frontend/src/views/dashboard/Preview.vue"
+    },
+    {
+      "id": "frontend/src/views/report/Designer.vue",
+      "type": "file",
+      "file_type": "other",
+      "name": "Designer.vue",
+      "extension": ".vue",
+      "line_count": 274,
+      "path": "frontend/src/views/report/Designer.vue"
+    },
+    {
+      "id": "frontend/src/views/report/List.vue",
+      "type": "file",
+      "file_type": "other",
+      "name": "List.vue",
+      "extension": ".vue",
+      "line_count": 309,
+      "path": "frontend/src/views/report/List.vue"
+    },
+    {
+      "id": "frontend/src/views/report/Preview.vue",
+      "type": "file",
+      "file_type": "other",
+      "name": "Preview.vue",
+      "extension": ".vue",
+      "line_count": 262,
+      "path": "frontend/src/views/report/Preview.vue"
+    },
+    {
+      "id": "frontend/src/views/share/List.vue",
+      "type": "file",
+      "file_type": "other",
+      "name": "List.vue",
+      "extension": ".vue",
+      "line_count": 199,
+      "path": "frontend/src/views/share/List.vue"
+    },
+    {
+      "id": "frontend/src/views/share/View.vue",
+      "type": "file",
+      "file_type": "other",
+      "name": "View.vue",
+      "extension": ".vue",
+      "line_count": 114,
+      "path": "frontend/src/views/share/View.vue"
+    },
+    {
+      "id": "backend/docs/DEPLOY.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "DEPLOY.md",
+      "extension": ".md",
+      "line_count": 322,
+      "path": "backend/docs/DEPLOY.md"
+    },
+    {
+      "id": "backend/docs/MONITOR.md",
+      "type": "file",
+      "file_type": "doc",
+      "name": "MONITOR.md",
+      "extension": ".md",
+      "line_count": 282,
+      "path": "backend/docs/MONITOR.md"
+    },
+    {
+      "id": "backend/scripts/deploy.bat",
+      "type": "file",
+      "file_type": "other",
+      "name": "deploy.bat",
+      "extension": ".bat",
+      "line_count": 70,
+      "path": "backend/scripts/deploy.bat"
+    },
+    {
+      "id": "backend/scripts/deploy.sh",
+      "type": "file",
+      "file_type": "other",
+      "name": "deploy.sh",
+      "extension": ".sh",
+      "line_count": 61,
+      "path": "backend/scripts/deploy.sh"
+    },
+    {
+      "id": "backend/scripts/restart.sh",
+      "type": "file",
+      "file_type": "other",
+      "name": "restart.sh",
+      "extension": ".sh",
+      "line_count": 44,
+      "path": "backend/scripts/restart.sh"
+    },
+    {
+      "id": "backend/xreport-common/pom.xml",
+      "type": "file",
+      "file_type": "other",
+      "name": "pom.xml",
+      "extension": ".xml",
+      "line_count": 94,
+      "path": "backend/xreport-common/pom.xml"
+    },
+    {
+      "id": "backend/xreport-mapper/pom.xml",
+      "type": "file",
+      "file_type": "other",
+      "name": "pom.xml",
+      "extension": ".xml",
+      "line_count": 52,
+      "path": "backend/xreport-mapper/pom.xml"
+    },
+    {
+      "id": "backend/xreport-pojo/pom.xml",
+      "type": "file",
+      "file_type": "other",
+      "name": "pom.xml",
+      "extension": ".xml",
+      "line_count": 58,
+      "path": "backend/xreport-pojo/pom.xml"
+    },
+    {
+      "id": "backend/xreport-service/pom.xml",
+      "type": "file",
+      "file_type": "other",
+      "name": "pom.xml",
+      "extension": ".xml",
+      "line_count": 86,
+      "path": "backend/xreport-service/pom.xml"
+    },
+    {
+      "id": "backend/xreport-web/pom.xml",
+      "type": "file",
+      "file_type": "other",
+      "name": "pom.xml",
+      "extension": ".xml",
+      "line_count": 143,
+      "path": "backend/xreport-web/pom.xml"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/application-docker.yml",
+      "type": "file",
+      "file_type": "config",
+      "name": "application-docker.yml",
+      "extension": ".yml",
+      "line_count": 44,
+      "path": "backend/xreport-web/target/classes/application-docker.yml"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/application.yml",
+      "type": "file",
+      "file_type": "config",
+      "name": "application.yml",
+      "extension": ".yml",
+      "line_count": 36,
+      "path": "backend/xreport-web/target/classes/application.yml"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/2026-04-15T17-23-21_181.dumpstream",
+      "type": "file",
+      "file_type": "other",
+      "name": "2026-04-15T17-23-21_181.dumpstream",
+      "extension": ".dumpstream",
+      "line_count": 6,
+      "path": "backend/xreport-web/target/surefire-reports/2026-04-15T17-23-21_181.dumpstream"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/2026-04-15T17-23-33_689.dumpstream",
+      "type": "file",
+      "file_type": "other",
+      "name": "2026-04-15T17-23-33_689.dumpstream",
+      "extension": ".dumpstream",
+      "line_count": 6,
+      "path": "backend/xreport-web/target/surefire-reports/2026-04-15T17-23-33_689.dumpstream"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/2026-04-15T17-25-12_925.dumpstream",
+      "type": "file",
+      "file_type": "other",
+      "name": "2026-04-15T17-25-12_925.dumpstream",
+      "extension": ".dumpstream",
+      "line_count": 6,
+      "path": "backend/xreport-web/target/surefire-reports/2026-04-15T17-25-12_925.dumpstream"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/2026-04-15T17-25-18_261.dumpstream",
+      "type": "file",
+      "file_type": "other",
+      "name": "2026-04-15T17-25-18_261.dumpstream",
+      "extension": ".dumpstream",
+      "line_count": 6,
+      "path": "backend/xreport-web/target/surefire-reports/2026-04-15T17-25-18_261.dumpstream"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/2026-04-15T17-25-49_884.dumpstream",
+      "type": "file",
+      "file_type": "other",
+      "name": "2026-04-15T17-25-49_884.dumpstream",
+      "extension": ".dumpstream",
+      "line_count": 6,
+      "path": "backend/xreport-web/target/surefire-reports/2026-04-15T17-25-49_884.dumpstream"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/2026-04-15T17-26-15_023.dumpstream",
+      "type": "file",
+      "file_type": "other",
+      "name": "2026-04-15T17-26-15_023.dumpstream",
+      "extension": ".dumpstream",
+      "line_count": 6,
+      "path": "backend/xreport-web/target/surefire-reports/2026-04-15T17-26-15_023.dumpstream"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/2026-04-15T17-27-02_309.dumpstream",
+      "type": "file",
+      "file_type": "other",
+      "name": "2026-04-15T17-27-02_309.dumpstream",
+      "extension": ".dumpstream",
+      "line_count": 6,
+      "path": "backend/xreport-web/target/surefire-reports/2026-04-15T17-27-02_309.dumpstream"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/2026-04-15T17-29-08_843.dumpstream",
+      "type": "file",
+      "file_type": "other",
+      "name": "2026-04-15T17-29-08_843.dumpstream",
+      "extension": ".dumpstream",
+      "line_count": 6,
+      "path": "backend/xreport-web/target/surefire-reports/2026-04-15T17-29-08_843.dumpstream"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/com.xreport.integration.AuthenticationIntegrationTest.txt",
+      "type": "file",
+      "file_type": "doc",
+      "name": "com.xreport.integration.AuthenticationIntegrationTest.txt",
+      "extension": ".txt",
+      "line_count": 17,
+      "path": "backend/xreport-web/target/surefire-reports/com.xreport.integration.AuthenticationIntegrationTest.txt"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/com.xreport.integration.DatasetIntegrationTest.txt",
+      "type": "file",
+      "file_type": "doc",
+      "name": "com.xreport.integration.DatasetIntegrationTest.txt",
+      "extension": ".txt",
+      "line_count": 278,
+      "path": "backend/xreport-web/target/surefire-reports/com.xreport.integration.DatasetIntegrationTest.txt"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/com.xreport.integration.DatasourceIntegrationTest.txt",
+      "type": "file",
+      "file_type": "doc",
+      "name": "com.xreport.integration.DatasourceIntegrationTest.txt",
+      "extension": ".txt",
+      "line_count": 215,
+      "path": "backend/xreport-web/target/surefire-reports/com.xreport.integration.DatasourceIntegrationTest.txt"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/com.xreport.integration.ReportIntegrationTest.txt",
+      "type": "file",
+      "file_type": "doc",
+      "name": "com.xreport.integration.ReportIntegrationTest.txt",
+      "extension": ".txt",
+      "line_count": 320,
+      "path": "backend/xreport-web/target/surefire-reports/com.xreport.integration.ReportIntegrationTest.txt"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/TEST-com.xreport.integration.AuthenticationIntegrationTest.xml",
+      "type": "file",
+      "file_type": "other",
+      "name": "TEST-com.xreport.integration.AuthenticationIntegrationTest.xml",
+      "extension": ".xml",
+      "line_count": 159,
+      "path": "backend/xreport-web/target/surefire-reports/TEST-com.xreport.integration.AuthenticationIntegrationTest.xml"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/TEST-com.xreport.integration.DatasetIntegrationTest.xml",
+      "type": "file",
+      "file_type": "other",
+      "name": "TEST-com.xreport.integration.DatasetIntegrationTest.xml",
+      "extension": ".xml",
+      "line_count": 1379,
+      "path": "backend/xreport-web/target/surefire-reports/TEST-com.xreport.integration.DatasetIntegrationTest.xml"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/TEST-com.xreport.integration.DatasourceIntegrationTest.xml",
+      "type": "file",
+      "file_type": "other",
+      "name": "TEST-com.xreport.integration.DatasourceIntegrationTest.xml",
+      "extension": ".xml",
+      "line_count": 1076,
+      "path": "backend/xreport-web/target/surefire-reports/TEST-com.xreport.integration.DatasourceIntegrationTest.xml"
+    },
+    {
+      "id": "backend/xreport-web/target/surefire-reports/TEST-com.xreport.integration.ReportIntegrationTest.xml",
+      "type": "file",
+      "file_type": "other",
+      "name": "TEST-com.xreport.integration.ReportIntegrationTest.xml",
+      "extension": ".xml",
+      "line_count": 1581,
+      "path": "backend/xreport-web/target/surefire-reports/TEST-com.xreport.integration.ReportIntegrationTest.xml"
+    },
+    {
+      "id": "backend/xreport-web/target/test-classes/application-test.yml",
+      "type": "file",
+      "file_type": "config",
+      "name": "application-test.yml",
+      "extension": ".yml",
+      "line_count": 44,
+      "path": "backend/xreport-web/target/test-classes/application-test.yml"
+    },
+    {
+      "id": "backend/xreport-web/target/test-classes/data-test.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "data-test.sql",
+      "extension": ".sql",
+      "line_count": 118,
+      "path": "backend/xreport-web/target/test-classes/data-test.sql"
+    },
+    {
+      "id": "backend/xreport-web/target/test-classes/schema-test.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "schema-test.sql",
+      "extension": ".sql",
+      "line_count": 177,
+      "path": "backend/xreport-web/target/test-classes/schema-test.sql"
+    },
+    {
+      "id": "backend/xreport-web/target/test-classes/com/xreport/integration/AuthenticationIntegrationTest.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "AuthenticationIntegrationTest.class",
+      "extension": ".class",
+      "line_count": 60,
+      "path": "backend/xreport-web/target/test-classes/com/xreport/integration/AuthenticationIntegrationTest.class"
+    },
+    {
+      "id": "backend/xreport-web/target/test-classes/com/xreport/integration/DatasetIntegrationTest.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "DatasetIntegrationTest.class",
+      "extension": ".class",
+      "line_count": 157,
+      "path": "backend/xreport-web/target/test-classes/com/xreport/integration/DatasetIntegrationTest.class"
+    },
+    {
+      "id": "backend/xreport-web/target/test-classes/com/xreport/integration/DatasourceIntegrationTest.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "DatasourceIntegrationTest.class",
+      "extension": ".class",
+      "line_count": 121,
+      "path": "backend/xreport-web/target/test-classes/com/xreport/integration/DatasourceIntegrationTest.class"
+    },
+    {
+      "id": "backend/xreport-web/target/test-classes/com/xreport/integration/ReportIntegrationTest.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportIntegrationTest.class",
+      "extension": ".class",
+      "line_count": 161,
+      "path": "backend/xreport-web/target/test-classes/com/xreport/integration/ReportIntegrationTest.class"
+    },
+    {
+      "id": "backend/xreport-web/target/test-classes/com/xreport/integration/TestApplication.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "TestApplication.class",
+      "extension": ".class",
+      "line_count": 23,
+      "path": "backend/xreport-web/target/test-classes/com/xreport/integration/TestApplication.class"
+    },
+    {
+      "id": "backend/xreport-web/target/test-classes/com/xreport/integration/TestSecurityHelper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "TestSecurityHelper.class",
+      "extension": ".class",
+      "line_count": 81,
+      "path": "backend/xreport-web/target/test-classes/com/xreport/integration/TestSecurityHelper.class"
+    },
+    {
+      "id": "backend/xreport-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "createdFiles.lst",
+      "extension": ".lst",
+      "line_count": 7,
+      "path": "backend/xreport-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst"
+    },
+    {
+      "id": "backend/xreport-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "inputFiles.lst",
+      "extension": ".lst",
+      "line_count": 7,
+      "path": "backend/xreport-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst"
+    },
+    {
+      "id": "backend/xreport-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "createdFiles.lst",
+      "extension": ".lst",
+      "line_count": 19,
+      "path": "backend/xreport-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst"
+    },
+    {
+      "id": "backend/xreport-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "inputFiles.lst",
+      "extension": ".lst",
+      "line_count": 19,
+      "path": "backend/xreport-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/sql/init/luckysheet_report_cell.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "luckysheet_report_cell.sql",
+      "extension": ".sql",
+      "line_count": 12,
+      "path": "backend/xreport-web/target/classes/sql/init/luckysheet_report_cell.sql"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/sql/init/report_tpl.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "report_tpl.sql",
+      "extension": ".sql",
+      "line_count": 24,
+      "path": "backend/xreport-web/target/classes/sql/init/report_tpl.sql"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/sql/init/report_tpl_sheet.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "report_tpl_sheet.sql",
+      "extension": ".sql",
+      "line_count": 22,
+      "path": "backend/xreport-web/target/classes/sql/init/report_tpl_sheet.sql"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/sql/init/sys_dept.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_dept.sql",
+      "extension": ".sql",
+      "line_count": 4,
+      "path": "backend/xreport-web/target/classes/sql/init/sys_dept.sql"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/sql/init/sys_menu.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_menu.sql",
+      "extension": ".sql",
+      "line_count": 9,
+      "path": "backend/xreport-web/target/classes/sql/init/sys_menu.sql"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/sql/init/sys_role.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_role.sql",
+      "extension": ".sql",
+      "line_count": 4,
+      "path": "backend/xreport-web/target/classes/sql/init/sys_role.sql"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/sql/init/sys_role_menu.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_role_menu.sql",
+      "extension": ".sql",
+      "line_count": 3,
+      "path": "backend/xreport-web/target/classes/sql/init/sys_role_menu.sql"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/sql/init/sys_user.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_user.sql",
+      "extension": ".sql",
+      "line_count": 4,
+      "path": "backend/xreport-web/target/classes/sql/init/sys_user.sql"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/sql/init/sys_user_role.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_user_role.sql",
+      "extension": ".sql",
+      "line_count": 2,
+      "path": "backend/xreport-web/target/classes/sql/init/sys_user_role.sql"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/config/JwtAuthenticationFilter.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "JwtAuthenticationFilter.class",
+      "extension": ".class",
+      "line_count": 30,
+      "path": "backend/xreport-web/target/classes/com/xreport/config/JwtAuthenticationFilter.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/config/RestTemplateConfig.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "RestTemplateConfig.class",
+      "extension": ".class",
+      "line_count": 11,
+      "path": "backend/xreport-web/target/classes/com/xreport/config/RestTemplateConfig.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/config/SecurityConfig.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SecurityConfig.class",
+      "extension": ".class",
+      "line_count": 54,
+      "path": "backend/xreport-web/target/classes/com/xreport/config/SecurityConfig.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/exception/GlobalExceptionHandler.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "GlobalExceptionHandler.class",
+      "extension": ".class",
+      "line_count": 19,
+      "path": "backend/xreport-web/target/classes/com/xreport/exception/GlobalExceptionHandler.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/security/JwtTokenManager.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "JwtTokenManager.class",
+      "extension": ".class",
+      "line_count": 37,
+      "path": "backend/xreport-web/target/classes/com/xreport/security/JwtTokenManager.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/security/ShiroRealm.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ShiroRealm.class",
+      "extension": ".class",
+      "line_count": 71,
+      "path": "backend/xreport-web/target/classes/com/xreport/security/ShiroRealm.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/service/system/PermissionService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "PermissionService.class",
+      "extension": ".class",
+      "line_count": 26,
+      "path": "backend/xreport-web/target/classes/com/xreport/service/system/PermissionService.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/controller/auth/AuthController.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "AuthController.class",
+      "extension": ".class",
+      "line_count": 20,
+      "path": "backend/xreport-web/target/classes/com/xreport/controller/auth/AuthController.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/controller/dataset/DatasetController.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "DatasetController.class",
+      "extension": ".class",
+      "line_count": 24,
+      "path": "backend/xreport-web/target/classes/com/xreport/controller/dataset/DatasetController.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/controller/datasource/DatasourceController.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "DatasourceController.class",
+      "extension": ".class",
+      "line_count": 28,
+      "path": "backend/xreport-web/target/classes/com/xreport/controller/datasource/DatasourceController.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/controller/report/LuckysheetController.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "LuckysheetController.class",
+      "extension": ".class",
+      "line_count": 16,
+      "path": "backend/xreport-web/target/classes/com/xreport/controller/report/LuckysheetController.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/controller/report/ReportRenderController.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportRenderController.class",
+      "extension": ".class",
+      "line_count": 17,
+      "path": "backend/xreport-web/target/classes/com/xreport/controller/report/ReportRenderController.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/controller/report/ReportTplController.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTplController.class",
+      "extension": ".class",
+      "line_count": 35,
+      "path": "backend/xreport-web/target/classes/com/xreport/controller/report/ReportTplController.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/controller/report/ReportTplSheetController.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTplSheetController.class",
+      "extension": ".class",
+      "line_count": 19,
+      "path": "backend/xreport-web/target/classes/com/xreport/controller/report/ReportTplSheetController.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/controller/system/SysDeptController.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysDeptController.class",
+      "extension": ".class",
+      "line_count": 18,
+      "path": "backend/xreport-web/target/classes/com/xreport/controller/system/SysDeptController.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/controller/system/SysMenuController.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysMenuController.class",
+      "extension": ".class",
+      "line_count": 18,
+      "path": "backend/xreport-web/target/classes/com/xreport/controller/system/SysMenuController.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/controller/system/SysRoleController.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysRoleController.class",
+      "extension": ".class",
+      "line_count": 18,
+      "path": "backend/xreport-web/target/classes/com/xreport/controller/system/SysRoleController.class"
+    },
+    {
+      "id": "backend/xreport-web/target/classes/com/xreport/controller/system/SysUserController.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysUserController.class",
+      "extension": ".class",
+      "line_count": 34,
+      "path": "backend/xreport-web/target/classes/com/xreport/controller/system/SysUserController.class"
+    },
+    {
+      "id": "backend/xreport-web/src/test/resources/application-test.yml",
+      "type": "file",
+      "file_type": "config",
+      "name": "application-test.yml",
+      "extension": ".yml",
+      "line_count": 44,
+      "path": "backend/xreport-web/src/test/resources/application-test.yml"
+    },
+    {
+      "id": "backend/xreport-web/src/test/resources/data-test.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "data-test.sql",
+      "extension": ".sql",
+      "line_count": 118,
+      "path": "backend/xreport-web/src/test/resources/data-test.sql"
+    },
+    {
+      "id": "backend/xreport-web/src/test/resources/schema-test.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "schema-test.sql",
+      "extension": ".sql",
+      "line_count": 177,
+      "path": "backend/xreport-web/src/test/resources/schema-test.sql"
+    },
+    {
+      "id": "backend/xreport-web/src/test/java/com/xreport/integration/AuthenticationIntegrationTest.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "AuthenticationIntegrationTest.java",
+      "extension": ".java",
+      "line_count": 360,
+      "path": "backend/xreport-web/src/test/java/com/xreport/integration/AuthenticationIntegrationTest.java"
+    },
+    {
+      "id": "backend/xreport-web/src/test/java/com/xreport/integration/DatasetIntegrationTest.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "DatasetIntegrationTest.java",
+      "extension": ".java",
+      "line_count": 512,
+      "path": "backend/xreport-web/src/test/java/com/xreport/integration/DatasetIntegrationTest.java"
+    },
+    {
+      "id": "backend/xreport-web/src/test/java/com/xreport/integration/DatasourceIntegrationTest.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "DatasourceIntegrationTest.java",
+      "extension": ".java",
+      "line_count": 416,
+      "path": "backend/xreport-web/src/test/java/com/xreport/integration/DatasourceIntegrationTest.java"
+    },
+    {
+      "id": "backend/xreport-web/src/test/java/com/xreport/integration/ReportIntegrationTest.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportIntegrationTest.java",
+      "extension": ".java",
+      "line_count": 560,
+      "path": "backend/xreport-web/src/test/java/com/xreport/integration/ReportIntegrationTest.java"
+    },
+    {
+      "id": "backend/xreport-web/src/test/java/com/xreport/integration/TestApplication.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "TestApplication.java",
+      "extension": ".java",
+      "line_count": 46,
+      "path": "backend/xreport-web/src/test/java/com/xreport/integration/TestApplication.java"
+    },
+    {
+      "id": "backend/xreport-web/src/test/java/com/xreport/integration/TestSecurityHelper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "TestSecurityHelper.java",
+      "extension": ".java",
+      "line_count": 202,
+      "path": "backend/xreport-web/src/test/java/com/xreport/integration/TestSecurityHelper.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/resources/application-docker.yml",
+      "type": "file",
+      "file_type": "config",
+      "name": "application-docker.yml",
+      "extension": ".yml",
+      "line_count": 44,
+      "path": "backend/xreport-web/src/main/resources/application-docker.yml"
+    },
+    {
+      "id": "backend/xreport-web/src/main/resources/application.yml",
+      "type": "file",
+      "file_type": "config",
+      "name": "application.yml",
+      "extension": ".yml",
+      "line_count": 36,
+      "path": "backend/xreport-web/src/main/resources/application.yml"
+    },
+    {
+      "id": "backend/xreport-web/src/main/resources/sql/init/luckysheet_report_cell.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "luckysheet_report_cell.sql",
+      "extension": ".sql",
+      "line_count": 12,
+      "path": "backend/xreport-web/src/main/resources/sql/init/luckysheet_report_cell.sql"
+    },
+    {
+      "id": "backend/xreport-web/src/main/resources/sql/init/report_tpl.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "report_tpl.sql",
+      "extension": ".sql",
+      "line_count": 24,
+      "path": "backend/xreport-web/src/main/resources/sql/init/report_tpl.sql"
+    },
+    {
+      "id": "backend/xreport-web/src/main/resources/sql/init/report_tpl_sheet.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "report_tpl_sheet.sql",
+      "extension": ".sql",
+      "line_count": 22,
+      "path": "backend/xreport-web/src/main/resources/sql/init/report_tpl_sheet.sql"
+    },
+    {
+      "id": "backend/xreport-web/src/main/resources/sql/init/sys_dept.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_dept.sql",
+      "extension": ".sql",
+      "line_count": 4,
+      "path": "backend/xreport-web/src/main/resources/sql/init/sys_dept.sql"
+    },
+    {
+      "id": "backend/xreport-web/src/main/resources/sql/init/sys_menu.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_menu.sql",
+      "extension": ".sql",
+      "line_count": 9,
+      "path": "backend/xreport-web/src/main/resources/sql/init/sys_menu.sql"
+    },
+    {
+      "id": "backend/xreport-web/src/main/resources/sql/init/sys_role.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_role.sql",
+      "extension": ".sql",
+      "line_count": 4,
+      "path": "backend/xreport-web/src/main/resources/sql/init/sys_role.sql"
+    },
+    {
+      "id": "backend/xreport-web/src/main/resources/sql/init/sys_role_menu.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_role_menu.sql",
+      "extension": ".sql",
+      "line_count": 3,
+      "path": "backend/xreport-web/src/main/resources/sql/init/sys_role_menu.sql"
+    },
+    {
+      "id": "backend/xreport-web/src/main/resources/sql/init/sys_user.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_user.sql",
+      "extension": ".sql",
+      "line_count": 4,
+      "path": "backend/xreport-web/src/main/resources/sql/init/sys_user.sql"
+    },
+    {
+      "id": "backend/xreport-web/src/main/resources/sql/init/sys_user_role.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_user_role.sql",
+      "extension": ".sql",
+      "line_count": 2,
+      "path": "backend/xreport-web/src/main/resources/sql/init/sys_user_role.sql"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/config/JwtAuthenticationFilter.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "JwtAuthenticationFilter.java",
+      "extension": ".java",
+      "line_count": 50,
+      "path": "backend/xreport-web/src/main/java/com/xreport/config/JwtAuthenticationFilter.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/config/RestTemplateConfig.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "RestTemplateConfig.java",
+      "extension": ".java",
+      "line_count": 18,
+      "path": "backend/xreport-web/src/main/java/com/xreport/config/RestTemplateConfig.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/config/SecurityConfig.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SecurityConfig.java",
+      "extension": ".java",
+      "line_count": 104,
+      "path": "backend/xreport-web/src/main/java/com/xreport/config/SecurityConfig.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/exception/GlobalExceptionHandler.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "GlobalExceptionHandler.java",
+      "extension": ".java",
+      "line_count": 56,
+      "path": "backend/xreport-web/src/main/java/com/xreport/exception/GlobalExceptionHandler.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/security/JwtTokenManager.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "JwtTokenManager.java",
+      "extension": ".java",
+      "line_count": 95,
+      "path": "backend/xreport-web/src/main/java/com/xreport/security/JwtTokenManager.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/security/ShiroRealm.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ShiroRealm.java",
+      "extension": ".java",
+      "line_count": 178,
+      "path": "backend/xreport-web/src/main/java/com/xreport/security/ShiroRealm.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/service/system/PermissionService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "PermissionService.java",
+      "extension": ".java",
+      "line_count": 133,
+      "path": "backend/xreport-web/src/main/java/com/xreport/service/system/PermissionService.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/controller/auth/AuthController.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "AuthController.java",
+      "extension": ".java",
+      "line_count": 46,
+      "path": "backend/xreport-web/src/main/java/com/xreport/controller/auth/AuthController.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/controller/dataset/DatasetController.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "DatasetController.java",
+      "extension": ".java",
+      "line_count": 108,
+      "path": "backend/xreport-web/src/main/java/com/xreport/controller/dataset/DatasetController.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/controller/datasource/DatasourceController.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "DatasourceController.java",
+      "extension": ".java",
+      "line_count": 135,
+      "path": "backend/xreport-web/src/main/java/com/xreport/controller/datasource/DatasourceController.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/controller/report/LuckysheetController.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "LuckysheetController.java",
+      "extension": ".java",
+      "line_count": 30,
+      "path": "backend/xreport-web/src/main/java/com/xreport/controller/report/LuckysheetController.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/controller/report/ReportRenderController.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportRenderController.java",
+      "extension": ".java",
+      "line_count": 40,
+      "path": "backend/xreport-web/src/main/java/com/xreport/controller/report/ReportRenderController.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/controller/report/ReportTplController.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTplController.java",
+      "extension": ".java",
+      "line_count": 109,
+      "path": "backend/xreport-web/src/main/java/com/xreport/controller/report/ReportTplController.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/controller/report/ReportTplSheetController.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTplSheetController.java",
+      "extension": ".java",
+      "line_count": 51,
+      "path": "backend/xreport-web/src/main/java/com/xreport/controller/report/ReportTplSheetController.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/controller/system/SysDeptController.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysDeptController.java",
+      "extension": ".java",
+      "line_count": 51,
+      "path": "backend/xreport-web/src/main/java/com/xreport/controller/system/SysDeptController.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/controller/system/SysMenuController.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysMenuController.java",
+      "extension": ".java",
+      "line_count": 51,
+      "path": "backend/xreport-web/src/main/java/com/xreport/controller/system/SysMenuController.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/controller/system/SysRoleController.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysRoleController.java",
+      "extension": ".java",
+      "line_count": 65,
+      "path": "backend/xreport-web/src/main/java/com/xreport/controller/system/SysRoleController.java"
+    },
+    {
+      "id": "backend/xreport-web/src/main/java/com/xreport/controller/system/SysUserController.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysUserController.java",
+      "extension": ".java",
+      "line_count": 92,
+      "path": "backend/xreport-web/src/main/java/com/xreport/controller/system/SysUserController.java"
+    },
+    {
+      "id": "backend/xreport-service/target/xreport-service-1.0.0-SNAPSHOT.jar",
+      "type": "file",
+      "file_type": "other",
+      "name": "xreport-service-1.0.0-SNAPSHOT.jar",
+      "extension": ".jar",
+      "line_count": 454,
+      "path": "backend/xreport-service/target/xreport-service-1.0.0-SNAPSHOT.jar"
+    },
+    {
+      "id": "backend/xreport-service/target/maven-archiver/pom.properties",
+      "type": "file",
+      "file_type": "other",
+      "name": "pom.properties",
+      "extension": ".properties",
+      "line_count": 4,
+      "path": "backend/xreport-service/target/maven-archiver/pom.properties"
+    },
+    {
+      "id": "backend/xreport-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "createdFiles.lst",
+      "extension": ".lst",
+      "line_count": 1,
+      "path": "backend/xreport-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst"
+    },
+    {
+      "id": "backend/xreport-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "inputFiles.lst",
+      "extension": ".lst",
+      "line_count": 1,
+      "path": "backend/xreport-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst"
+    },
+    {
+      "id": "backend/xreport-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "createdFiles.lst",
+      "extension": ".lst",
+      "line_count": 25,
+      "path": "backend/xreport-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst"
+    },
+    {
+      "id": "backend/xreport-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "inputFiles.lst",
+      "extension": ".lst",
+      "line_count": 25,
+      "path": "backend/xreport-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/auth/IAuthService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "IAuthService.class",
+      "extension": ".class",
+      "line_count": 3,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/auth/IAuthService.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/dataset/IDatasetQueryEngine.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "IDatasetQueryEngine.class",
+      "extension": ".class",
+      "line_count": 5,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/dataset/IDatasetQueryEngine.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/dataset/IDatasetService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "IDatasetService.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/dataset/IDatasetService.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/report/ILuckysheetReportCellService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ILuckysheetReportCellService.class",
+      "extension": ".class",
+      "line_count": 3,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/report/ILuckysheetReportCellService.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/report/IReportDatasourceService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "IReportDatasourceService.class",
+      "extension": ".class",
+      "line_count": 5,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/report/IReportDatasourceService.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/report/IReportRenderService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "IReportRenderService.class",
+      "extension": ".class",
+      "line_count": 5,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/report/IReportRenderService.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/report/IReportTplService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "IReportTplService.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/report/IReportTplService.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/report/IReportTplSheetService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "IReportTplSheetService.class",
+      "extension": ".class",
+      "line_count": 6,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/report/IReportTplSheetService.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/system/ISysDeptService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ISysDeptService.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/system/ISysDeptService.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/system/ISysMenuService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ISysMenuService.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/system/ISysMenuService.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/system/ISysRoleService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ISysRoleService.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/system/ISysRoleService.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/system/ISysUserService.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ISysUserService.class",
+      "extension": ".class",
+      "line_count": 6,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/system/ISysUserService.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/system/impl/SysDeptServiceImpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysDeptServiceImpl.class",
+      "extension": ".class",
+      "line_count": 90,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/system/impl/SysDeptServiceImpl.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/system/impl/SysMenuServiceImpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysMenuServiceImpl.class",
+      "extension": ".class",
+      "line_count": 95,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/system/impl/SysMenuServiceImpl.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/system/impl/SysRoleServiceImpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysRoleServiceImpl.class",
+      "extension": ".class",
+      "line_count": 88,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/system/impl/SysRoleServiceImpl.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/system/impl/SysUserServiceImpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysUserServiceImpl.class",
+      "extension": ".class",
+      "line_count": 100,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/system/impl/SysUserServiceImpl.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/report/impl/LuckysheetReportCellServiceImpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "LuckysheetReportCellServiceImpl.class",
+      "extension": ".class",
+      "line_count": 66,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/report/impl/LuckysheetReportCellServiceImpl.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/report/impl/ReportDatasourceServiceImpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportDatasourceServiceImpl.class",
+      "extension": ".class",
+      "line_count": 130,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/report/impl/ReportDatasourceServiceImpl.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/report/impl/ReportRenderServiceImpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportRenderServiceImpl.class",
+      "extension": ".class",
+      "line_count": 148,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/report/impl/ReportRenderServiceImpl.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/report/impl/ReportTplServiceImpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTplServiceImpl.class",
+      "extension": ".class",
+      "line_count": 91,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/report/impl/ReportTplServiceImpl.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/report/impl/ReportTplSheetServiceImpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTplSheetServiceImpl.class",
+      "extension": ".class",
+      "line_count": 84,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/report/impl/ReportTplSheetServiceImpl.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/dataset/impl/DatasetQueryEngine.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "DatasetQueryEngine.class",
+      "extension": ".class",
+      "line_count": 111,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/dataset/impl/DatasetQueryEngine.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/dataset/impl/DatasetServiceImpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "DatasetServiceImpl.class",
+      "extension": ".class",
+      "line_count": 100,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/dataset/impl/DatasetServiceImpl.class"
+    },
+    {
+      "id": "backend/xreport-service/target/classes/com/xreport/service/auth/impl/AuthServiceImpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "AuthServiceImpl.class",
+      "extension": ".class",
+      "line_count": 27,
+      "path": "backend/xreport-service/target/classes/com/xreport/service/auth/impl/AuthServiceImpl.class"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/auth/IAuthService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "IAuthService.java",
+      "extension": ".java",
+      "line_count": 10,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/auth/IAuthService.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/dataset/IDatasetQueryEngine.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "IDatasetQueryEngine.java",
+      "extension": ".java",
+      "line_count": 37,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/dataset/IDatasetQueryEngine.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/dataset/IDatasetService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "IDatasetService.java",
+      "extension": ".java",
+      "line_count": 54,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/dataset/IDatasetService.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/report/ILuckysheetReportCellService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ILuckysheetReportCellService.java",
+      "extension": ".java",
+      "line_count": 9,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/report/ILuckysheetReportCellService.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/report/IReportDatasourceService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "IReportDatasourceService.java",
+      "extension": ".java",
+      "line_count": 61,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/report/IReportDatasourceService.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/report/IReportRenderService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "IReportRenderService.java",
+      "extension": ".java",
+      "line_count": 33,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/report/IReportRenderService.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/report/IReportTplService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "IReportTplService.java",
+      "extension": ".java",
+      "line_count": 18,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/report/IReportTplService.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/report/IReportTplSheetService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "IReportTplSheetService.java",
+      "extension": ".java",
+      "line_count": 14,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/report/IReportTplSheetService.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/system/ISysDeptService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ISysDeptService.java",
+      "extension": ".java",
+      "line_count": 13,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/system/ISysDeptService.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/system/ISysMenuService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ISysMenuService.java",
+      "extension": ".java",
+      "line_count": 13,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/system/ISysMenuService.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/system/ISysRoleService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ISysRoleService.java",
+      "extension": ".java",
+      "line_count": 17,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/system/ISysRoleService.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/system/ISysUserService.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ISysUserService.java",
+      "extension": ".java",
+      "line_count": 19,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/system/ISysUserService.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/system/impl/SysDeptServiceImpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysDeptServiceImpl.java",
+      "extension": ".java",
+      "line_count": 105,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/system/impl/SysDeptServiceImpl.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/system/impl/SysMenuServiceImpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysMenuServiceImpl.java",
+      "extension": ".java",
+      "line_count": 84,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/system/impl/SysMenuServiceImpl.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/system/impl/SysRoleServiceImpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysRoleServiceImpl.java",
+      "extension": ".java",
+      "line_count": 119,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/system/impl/SysRoleServiceImpl.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/system/impl/SysUserServiceImpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysUserServiceImpl.java",
+      "extension": ".java",
+      "line_count": 166,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/system/impl/SysUserServiceImpl.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/report/impl/LuckysheetReportCellServiceImpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "LuckysheetReportCellServiceImpl.java",
+      "extension": ".java",
+      "line_count": 65,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/report/impl/LuckysheetReportCellServiceImpl.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/report/impl/ReportDatasourceServiceImpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportDatasourceServiceImpl.java",
+      "extension": ".java",
+      "line_count": 205,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/report/impl/ReportDatasourceServiceImpl.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/report/impl/ReportRenderServiceImpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportRenderServiceImpl.java",
+      "extension": ".java",
+      "line_count": 257,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/report/impl/ReportRenderServiceImpl.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/report/impl/ReportTplServiceImpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTplServiceImpl.java",
+      "extension": ".java",
+      "line_count": 120,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/report/impl/ReportTplServiceImpl.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/report/impl/ReportTplSheetServiceImpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTplSheetServiceImpl.java",
+      "extension": ".java",
+      "line_count": 91,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/report/impl/ReportTplSheetServiceImpl.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/dataset/impl/DatasetQueryEngine.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "DatasetQueryEngine.java",
+      "extension": ".java",
+      "line_count": 256,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/dataset/impl/DatasetQueryEngine.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/dataset/impl/DatasetServiceImpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "DatasetServiceImpl.java",
+      "extension": ".java",
+      "line_count": 143,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/dataset/impl/DatasetServiceImpl.java"
+    },
+    {
+      "id": "backend/xreport-service/src/main/java/com/xreport/service/auth/impl/AuthServiceImpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "AuthServiceImpl.java",
+      "extension": ".java",
+      "line_count": 51,
+      "path": "backend/xreport-service/src/main/java/com/xreport/service/auth/impl/AuthServiceImpl.java"
+    },
+    {
+      "id": "backend/xreport-pojo/target/xreport-pojo-1.0.0-SNAPSHOT.jar",
+      "type": "file",
+      "file_type": "other",
+      "name": "xreport-pojo-1.0.0-SNAPSHOT.jar",
+      "extension": ".jar",
+      "line_count": 327,
+      "path": "backend/xreport-pojo/target/xreport-pojo-1.0.0-SNAPSHOT.jar"
+    },
+    {
+      "id": "backend/xreport-pojo/target/maven-archiver/pom.properties",
+      "type": "file",
+      "file_type": "other",
+      "name": "pom.properties",
+      "extension": ".properties",
+      "line_count": 4,
+      "path": "backend/xreport-pojo/target/maven-archiver/pom.properties"
+    },
+    {
+      "id": "backend/xreport-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "createdFiles.lst",
+      "extension": ".lst",
+      "line_count": 32,
+      "path": "backend/xreport-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst"
+    },
+    {
+      "id": "backend/xreport-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "inputFiles.lst",
+      "extension": ".lst",
+      "line_count": 30,
+      "path": "backend/xreport-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/AggregationRequest$AggregationField.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "AggregationRequest$AggregationField.class",
+      "extension": ".class",
+      "line_count": 10,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/AggregationRequest$AggregationField.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/AggregationRequest$OrderField.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "AggregationRequest$OrderField.class",
+      "extension": ".class",
+      "line_count": 10,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/AggregationRequest$OrderField.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/AggregationRequest.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "AggregationRequest.class",
+      "extension": ".class",
+      "line_count": 16,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/AggregationRequest.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/ApiDatasourceDTO.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ApiDatasourceDTO.class",
+      "extension": ".class",
+      "line_count": 9,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/ApiDatasourceDTO.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/DatasetDTO.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "DatasetDTO.class",
+      "extension": ".class",
+      "line_count": 16,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/DatasetDTO.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/DatasourceDTO.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "DatasourceDTO.class",
+      "extension": ".class",
+      "line_count": 17,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/DatasourceDTO.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/LuckysheetCellDto.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "LuckysheetCellDto.class",
+      "extension": ".class",
+      "line_count": 32,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/LuckysheetCellDto.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/LuckysheetSaveRequest.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "LuckysheetSaveRequest.class",
+      "extension": ".class",
+      "line_count": 10,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/LuckysheetSaveRequest.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/RenderRequest.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "RenderRequest.class",
+      "extension": ".class",
+      "line_count": 13,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/RenderRequest.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/ReportDatasetDto.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportDatasetDto.class",
+      "extension": ".class",
+      "line_count": 28,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/ReportDatasetDto.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/ReportTplDto.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTplDto.class",
+      "extension": ".class",
+      "line_count": 18,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/ReportTplDto.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/ReportTplSheetDto.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTplSheetDto.class",
+      "extension": ".class",
+      "line_count": 29,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/ReportTplSheetDto.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/SysRoleDto.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysRoleDto.class",
+      "extension": ".class",
+      "line_count": 12,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/SysRoleDto.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/SysUserDto.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysUserDto.class",
+      "extension": ".class",
+      "line_count": 13,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/SysUserDto.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/UserLoginRequest.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "UserLoginRequest.class",
+      "extension": ".class",
+      "line_count": 7,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/UserLoginRequest.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/UserLoginResponse.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "UserLoginResponse.class",
+      "extension": ".class",
+      "line_count": 12,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/dto/UserLoginResponse.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/LuckysheetReportCell.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "LuckysheetReportCell.class",
+      "extension": ".class",
+      "line_count": 16,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/LuckysheetReportCell.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/ReportTpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTpl.class",
+      "extension": ".class",
+      "line_count": 24,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/ReportTpl.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/ReportTplSheet.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTplSheet.class",
+      "extension": ".class",
+      "line_count": 17,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/ReportTplSheet.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysDept.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysDept.class",
+      "extension": ".class",
+      "line_count": 14,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysDept.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysMenu.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysMenu.class",
+      "extension": ".class",
+      "line_count": 20,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysMenu.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysRole.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysRole.class",
+      "extension": ".class",
+      "line_count": 19,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysRole.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysRoleMenu.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysRoleMenu.class",
+      "extension": ".class",
+      "line_count": 9,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysRoleMenu.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysUser.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysUser.class",
+      "extension": ".class",
+      "line_count": 19,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysUser.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysUserRole.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysUserRole.class",
+      "extension": ".class",
+      "line_count": 9,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/SysUserRole.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/vo/LoginUserVo.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "LoginUserVo.class",
+      "extension": ".class",
+      "line_count": 10,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/vo/LoginUserVo.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/luckysheetcell/LuckysheetCell.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "LuckysheetCell.class",
+      "extension": ".class",
+      "line_count": 63,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/luckysheetcell/LuckysheetCell.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/reportdataset/ReportDataset.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportDataset.class",
+      "extension": ".class",
+      "line_count": 17,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/reportdataset/ReportDataset.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/reportdatasource/ReportDatasource.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportDatasource.class",
+      "extension": ".class",
+      "line_count": 24,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/reportdatasource/ReportDatasource.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/reporttpl/ReportTpl.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTpl.class",
+      "extension": ".class",
+      "line_count": 92,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/reporttpl/ReportTpl.class"
+    },
+    {
+      "id": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/reporttplsheet/ReportTplSheet.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTplSheet.class",
+      "extension": ".class",
+      "line_count": 58,
+      "path": "backend/xreport-pojo/target/classes/com/xreport/pojo/entity/reporttplsheet/ReportTplSheet.class"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/AggregationRequest.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "AggregationRequest.java",
+      "extension": ".java",
+      "line_count": 147,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/AggregationRequest.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/ApiDatasourceDTO.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ApiDatasourceDTO.java",
+      "extension": ".java",
+      "line_count": 41,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/ApiDatasourceDTO.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/DatasetDTO.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "DatasetDTO.java",
+      "extension": ".java",
+      "line_count": 81,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/DatasetDTO.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/DatasourceDTO.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "DatasourceDTO.java",
+      "extension": ".java",
+      "line_count": 59,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/DatasourceDTO.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/LuckysheetCellDto.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "LuckysheetCellDto.java",
+      "extension": ".java",
+      "line_count": 101,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/LuckysheetCellDto.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/LuckysheetSaveRequest.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "LuckysheetSaveRequest.java",
+      "extension": ".java",
+      "line_count": 17,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/LuckysheetSaveRequest.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/RenderRequest.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "RenderRequest.java",
+      "extension": ".java",
+      "line_count": 38,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/RenderRequest.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/ReportDatasetDto.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportDatasetDto.java",
+      "extension": ".java",
+      "line_count": 146,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/ReportDatasetDto.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/ReportTplDto.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTplDto.java",
+      "extension": ".java",
+      "line_count": 23,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/ReportTplDto.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/ReportTplSheetDto.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTplSheetDto.java",
+      "extension": ".java",
+      "line_count": 92,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/ReportTplSheetDto.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/SysRoleDto.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysRoleDto.java",
+      "extension": ".java",
+      "line_count": 20,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/SysRoleDto.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/SysUserDto.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysUserDto.java",
+      "extension": ".java",
+      "line_count": 26,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/SysUserDto.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/UserLoginRequest.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "UserLoginRequest.java",
+      "extension": ".java",
+      "line_count": 14,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/UserLoginRequest.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/UserLoginResponse.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "UserLoginResponse.java",
+      "extension": ".java",
+      "line_count": 31,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/dto/UserLoginResponse.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/LuckysheetReportCell.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "LuckysheetReportCell.java",
+      "extension": ".java",
+      "line_count": 37,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/LuckysheetReportCell.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/ReportTpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTpl.java",
+      "extension": ".java",
+      "line_count": 61,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/ReportTpl.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/ReportTplSheet.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTplSheet.java",
+      "extension": ".java",
+      "line_count": 52,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/ReportTplSheet.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysDept.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysDept.java",
+      "extension": ".java",
+      "line_count": 52,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysDept.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysMenu.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysMenu.java",
+      "extension": ".java",
+      "line_count": 61,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysMenu.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysRole.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysRole.java",
+      "extension": ".java",
+      "line_count": 50,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysRole.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysRoleMenu.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysRoleMenu.java",
+      "extension": ".java",
+      "line_count": 25,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysRoleMenu.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysUser.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysUser.java",
+      "extension": ".java",
+      "line_count": 63,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysUser.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysUserRole.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysUserRole.java",
+      "extension": ".java",
+      "line_count": 25,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/SysUserRole.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/vo/LoginUserVo.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "LoginUserVo.java",
+      "extension": ".java",
+      "line_count": 33,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/vo/LoginUserVo.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/luckysheetcell/LuckysheetCell.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "LuckysheetCell.java",
+      "extension": ".java",
+      "line_count": 43,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/luckysheetcell/LuckysheetCell.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/reportdataset/ReportDataset.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportDataset.java",
+      "extension": ".java",
+      "line_count": 86,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/reportdataset/ReportDataset.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/reportdatasource/ReportDatasource.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportDatasource.java",
+      "extension": ".java",
+      "line_count": 96,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/reportdatasource/ReportDatasource.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/reporttpl/ReportTpl.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTpl.java",
+      "extension": ".java",
+      "line_count": 54,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/reporttpl/ReportTpl.java"
+    },
+    {
+      "id": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/reporttplsheet/ReportTplSheet.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTplSheet.java",
+      "extension": ".java",
+      "line_count": 40,
+      "path": "backend/xreport-pojo/src/main/java/com/xreport/pojo/entity/reporttplsheet/ReportTplSheet.java"
+    },
+    {
+      "id": "backend/xreport-mapper/target/xreport-mapper-1.0.0-SNAPSHOT.jar",
+      "type": "file",
+      "file_type": "other",
+      "name": "xreport-mapper-1.0.0-SNAPSHOT.jar",
+      "extension": ".jar",
+      "line_count": 60,
+      "path": "backend/xreport-mapper/target/xreport-mapper-1.0.0-SNAPSHOT.jar"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/application.yml",
+      "type": "file",
+      "file_type": "config",
+      "name": "application.yml",
+      "extension": ".yml",
+      "line_count": 25,
+      "path": "backend/xreport-mapper/target/classes/application.yml"
+    },
+    {
+      "id": "backend/xreport-mapper/target/maven-archiver/pom.properties",
+      "type": "file",
+      "file_type": "other",
+      "name": "pom.properties",
+      "extension": ".properties",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/maven-archiver/pom.properties"
+    },
+    {
+      "id": "backend/xreport-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "createdFiles.lst",
+      "extension": ".lst",
+      "line_count": 12,
+      "path": "backend/xreport-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst"
+    },
+    {
+      "id": "backend/xreport-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "inputFiles.lst",
+      "extension": ".lst",
+      "line_count": 12,
+      "path": "backend/xreport-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysDeptMapper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysDeptMapper.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysDeptMapper.class"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysMenuMapper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysMenuMapper.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysMenuMapper.class"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysRoleMapper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysRoleMapper.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysRoleMapper.class"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysRoleMenuMapper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysRoleMenuMapper.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysRoleMenuMapper.class"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysUserMapper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysUserMapper.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysUserMapper.class"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysUserRoleMapper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "SysUserRoleMapper.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/classes/com/xreport/mapper/SysUserRoleMapper.class"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/com/xreport/mapper/report/LuckysheetReportCellMapper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "LuckysheetReportCellMapper.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/classes/com/xreport/mapper/report/LuckysheetReportCellMapper.class"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/com/xreport/mapper/report/ReportDatasetMapper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportDatasetMapper.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/classes/com/xreport/mapper/report/ReportDatasetMapper.class"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/com/xreport/mapper/report/ReportDatasourceMapper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportDatasourceMapper.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/classes/com/xreport/mapper/report/ReportDatasourceMapper.class"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/com/xreport/mapper/report/ReportTplMapper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTplMapper.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/classes/com/xreport/mapper/report/ReportTplMapper.class"
+    },
+    {
+      "id": "backend/xreport-mapper/target/classes/com/xreport/mapper/report/ReportTplSheetMapper.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ReportTplSheetMapper.class",
+      "extension": ".class",
+      "line_count": 4,
+      "path": "backend/xreport-mapper/target/classes/com/xreport/mapper/report/ReportTplSheetMapper.class"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/resources/application.yml",
+      "type": "file",
+      "file_type": "config",
+      "name": "application.yml",
+      "extension": ".yml",
+      "line_count": 25,
+      "path": "backend/xreport-mapper/src/main/resources/application.yml"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysDeptMapper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysDeptMapper.java",
+      "extension": ".java",
+      "line_count": 9,
+      "path": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysDeptMapper.java"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysMenuMapper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysMenuMapper.java",
+      "extension": ".java",
+      "line_count": 9,
+      "path": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysMenuMapper.java"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysRoleMapper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysRoleMapper.java",
+      "extension": ".java",
+      "line_count": 9,
+      "path": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysRoleMapper.java"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysRoleMenuMapper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysRoleMenuMapper.java",
+      "extension": ".java",
+      "line_count": 9,
+      "path": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysRoleMenuMapper.java"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysUserMapper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysUserMapper.java",
+      "extension": ".java",
+      "line_count": 9,
+      "path": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysUserMapper.java"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysUserRoleMapper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "SysUserRoleMapper.java",
+      "extension": ".java",
+      "line_count": 9,
+      "path": "backend/xreport-mapper/src/main/java/com/xreport/mapper/SysUserRoleMapper.java"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/java/com/xreport/mapper/report/LuckysheetReportCellMapper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "LuckysheetReportCellMapper.java",
+      "extension": ".java",
+      "line_count": 9,
+      "path": "backend/xreport-mapper/src/main/java/com/xreport/mapper/report/LuckysheetReportCellMapper.java"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/java/com/xreport/mapper/report/ReportDatasetMapper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportDatasetMapper.java",
+      "extension": ".java",
+      "line_count": 11,
+      "path": "backend/xreport-mapper/src/main/java/com/xreport/mapper/report/ReportDatasetMapper.java"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/java/com/xreport/mapper/report/ReportDatasourceMapper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportDatasourceMapper.java",
+      "extension": ".java",
+      "line_count": 8,
+      "path": "backend/xreport-mapper/src/main/java/com/xreport/mapper/report/ReportDatasourceMapper.java"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/java/com/xreport/mapper/report/ReportTplMapper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTplMapper.java",
+      "extension": ".java",
+      "line_count": 9,
+      "path": "backend/xreport-mapper/src/main/java/com/xreport/mapper/report/ReportTplMapper.java"
+    },
+    {
+      "id": "backend/xreport-mapper/src/main/java/com/xreport/mapper/report/ReportTplSheetMapper.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ReportTplSheetMapper.java",
+      "extension": ".java",
+      "line_count": 9,
+      "path": "backend/xreport-mapper/src/main/java/com/xreport/mapper/report/ReportTplSheetMapper.java"
+    },
+    {
+      "id": "backend/xreport-common/target/xreport-common-1.0.0-SNAPSHOT.jar",
+      "type": "file",
+      "file_type": "other",
+      "name": "xreport-common-1.0.0-SNAPSHOT.jar",
+      "extension": ".jar",
+      "line_count": 108,
+      "path": "backend/xreport-common/target/xreport-common-1.0.0-SNAPSHOT.jar"
+    },
+    {
+      "id": "backend/xreport-common/target/maven-archiver/pom.properties",
+      "type": "file",
+      "file_type": "other",
+      "name": "pom.properties",
+      "extension": ".properties",
+      "line_count": 4,
+      "path": "backend/xreport-common/target/maven-archiver/pom.properties"
+    },
+    {
+      "id": "backend/xreport-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "createdFiles.lst",
+      "extension": ".lst",
+      "line_count": 10,
+      "path": "backend/xreport-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst"
+    },
+    {
+      "id": "backend/xreport-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst",
+      "type": "file",
+      "file_type": "other",
+      "name": "inputFiles.lst",
+      "extension": ".lst",
+      "line_count": 10,
+      "path": "backend/xreport-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst"
+    },
+    {
+      "id": "backend/xreport-common/target/classes/com/xreport/common/XReportApplication.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "XReportApplication.class",
+      "extension": ".class",
+      "line_count": 6,
+      "path": "backend/xreport-common/target/classes/com/xreport/common/XReportApplication.class"
+    },
+    {
+      "id": "backend/xreport-common/target/classes/com/xreport/common/constant/Constants.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "Constants.class",
+      "extension": ".class",
+      "line_count": 13,
+      "path": "backend/xreport-common/target/classes/com/xreport/common/constant/Constants.class"
+    },
+    {
+      "id": "backend/xreport-common/target/classes/com/xreport/common/exception/BusinessException.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "BusinessException.class",
+      "extension": ".class",
+      "line_count": 14,
+      "path": "backend/xreport-common/target/classes/com/xreport/common/exception/BusinessException.class"
+    },
+    {
+      "id": "backend/xreport-common/target/classes/com/xreport/common/result/Result.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "Result.class",
+      "extension": ".class",
+      "line_count": 28,
+      "path": "backend/xreport-common/target/classes/com/xreport/common/result/Result.class"
+    },
+    {
+      "id": "backend/xreport-common/target/classes/com/xreport/common/result/ResultCode.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "ResultCode.class",
+      "extension": ".class",
+      "line_count": 17,
+      "path": "backend/xreport-common/target/classes/com/xreport/common/result/ResultCode.class"
+    },
+    {
+      "id": "backend/xreport-common/target/classes/com/xreport/common/util/IdWorker.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "IdWorker.class",
+      "extension": ".class",
+      "line_count": 14,
+      "path": "backend/xreport-common/target/classes/com/xreport/common/util/IdWorker.class"
+    },
+    {
+      "id": "backend/xreport-common/target/classes/com/xreport/common/util/JdbcUtils.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "JdbcUtils.class",
+      "extension": ".class",
+      "line_count": 45,
+      "path": "backend/xreport-common/target/classes/com/xreport/common/util/JdbcUtils.class"
+    },
+    {
+      "id": "backend/xreport-common/target/classes/com/xreport/common/util/JwtUtils.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "JwtUtils.class",
+      "extension": ".class",
+      "line_count": 35,
+      "path": "backend/xreport-common/target/classes/com/xreport/common/util/JwtUtils.class"
+    },
+    {
+      "id": "backend/xreport-common/target/classes/com/xreport/common/util/PasswordEncoder.class",
+      "type": "file",
+      "file_type": "other",
+      "name": "PasswordEncoder.class",
+      "extension": ".class",
+      "line_count": 9,
+      "path": "backend/xreport-common/target/classes/com/xreport/common/util/PasswordEncoder.class"
+    },
+    {
+      "id": "backend/xreport-common/src/main/java/com/xreport/common/XReportApplication.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "XReportApplication.java",
+      "extension": ".java",
+      "line_count": 12,
+      "path": "backend/xreport-common/src/main/java/com/xreport/common/XReportApplication.java"
+    },
+    {
+      "id": "backend/xreport-common/src/main/java/com/xreport/common/constant/Constants.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "Constants.java",
+      "extension": ".java",
+      "line_count": 63,
+      "path": "backend/xreport-common/src/main/java/com/xreport/common/constant/Constants.java"
+    },
+    {
+      "id": "backend/xreport-common/src/main/java/com/xreport/common/exception/BusinessException.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "BusinessException.java",
+      "extension": ".java",
+      "line_count": 36,
+      "path": "backend/xreport-common/src/main/java/com/xreport/common/exception/BusinessException.java"
+    },
+    {
+      "id": "backend/xreport-common/src/main/java/com/xreport/common/result/Result.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "Result.java",
+      "extension": ".java",
+      "line_count": 63,
+      "path": "backend/xreport-common/src/main/java/com/xreport/common/result/Result.java"
+    },
+    {
+      "id": "backend/xreport-common/src/main/java/com/xreport/common/result/ResultCode.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "ResultCode.java",
+      "extension": ".java",
+      "line_count": 25,
+      "path": "backend/xreport-common/src/main/java/com/xreport/common/result/ResultCode.java"
+    },
+    {
+      "id": "backend/xreport-common/src/main/java/com/xreport/common/util/IdWorker.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "IdWorker.java",
+      "extension": ".java",
+      "line_count": 22,
+      "path": "backend/xreport-common/src/main/java/com/xreport/common/util/IdWorker.java"
+    },
+    {
+      "id": "backend/xreport-common/src/main/java/com/xreport/common/util/JdbcUtils.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "JdbcUtils.java",
+      "extension": ".java",
+      "line_count": 142,
+      "path": "backend/xreport-common/src/main/java/com/xreport/common/util/JdbcUtils.java"
+    },
+    {
+      "id": "backend/xreport-common/src/main/java/com/xreport/common/util/JwtUtils.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "JwtUtils.java",
+      "extension": ".java",
+      "line_count": 59,
+      "path": "backend/xreport-common/src/main/java/com/xreport/common/util/JwtUtils.java"
+    },
+    {
+      "id": "backend/xreport-common/src/main/java/com/xreport/common/util/PasswordEncoder.java",
+      "type": "file",
+      "file_type": "code",
+      "name": "PasswordEncoder.java",
+      "extension": ".java",
+      "line_count": 33,
+      "path": "backend/xreport-common/src/main/java/com/xreport/common/util/PasswordEncoder.java"
+    },
+    {
+      "id": "backend/sql/init/dashboard_tpl.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "dashboard_tpl.sql",
+      "extension": ".sql",
+      "line_count": 25,
+      "path": "backend/sql/init/dashboard_tpl.sql"
+    },
+    {
+      "id": "backend/sql/init/report_dataset.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "report_dataset.sql",
+      "extension": ".sql",
+      "line_count": 23,
+      "path": "backend/sql/init/report_dataset.sql"
+    },
+    {
+      "id": "backend/sql/init/report_tpl.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "report_tpl.sql",
+      "extension": ".sql",
+      "line_count": 53,
+      "path": "backend/sql/init/report_tpl.sql"
+    },
+    {
+      "id": "backend/sql/init/sys_dept.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_dept.sql",
+      "extension": ".sql",
+      "line_count": 6,
+      "path": "backend/sql/init/sys_dept.sql"
+    },
+    {
+      "id": "backend/sql/init/sys_menu.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_menu.sql",
+      "extension": ".sql",
+      "line_count": 13,
+      "path": "backend/sql/init/sys_menu.sql"
+    },
+    {
+      "id": "backend/sql/init/sys_role.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_role.sql",
+      "extension": ".sql",
+      "line_count": 5,
+      "path": "backend/sql/init/sys_role.sql"
+    },
+    {
+      "id": "backend/sql/init/sys_role_menu.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_role_menu.sql",
+      "extension": ".sql",
+      "line_count": 12,
+      "path": "backend/sql/init/sys_role_menu.sql"
+    },
+    {
+      "id": "backend/sql/init/sys_share.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_share.sql",
+      "extension": ".sql",
+      "line_count": 19,
+      "path": "backend/sql/init/sys_share.sql"
+    },
+    {
+      "id": "backend/sql/init/sys_user.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_user.sql",
+      "extension": ".sql",
+      "line_count": 7,
+      "path": "backend/sql/init/sys_user.sql"
+    },
+    {
+      "id": "backend/sql/init/sys_user_role.sql",
+      "type": "file",
+      "file_type": "other",
+      "name": "sys_user_role.sql",
+      "extension": ".sql",
+      "line_count": 5,
+      "path": "backend/sql/init/sys_user_role.sql"
     }
   ],
   "edges": [
@@ -285,21 +3246,73 @@
       "source": "package.json",
       "target": "dep:@types/react",
       "type": "depends_on"
+    },
+    {
+      "source": "frontend/package.json",
+      "target": "dep:@element-plus/icons-vue",
+      "type": "depends_on"
+    },
+    {
+      "source": "frontend/package.json",
+      "target": "dep:axios",
+      "type": "depends_on"
+    },
+    {
+      "source": "frontend/package.json",
+      "target": "dep:dayjs",
+      "type": "depends_on"
+    },
+    {
+      "source": "frontend/package.json",
+      "target": "dep:echarts",
+      "type": "depends_on"
+    },
+    {
+      "source": "frontend/package.json",
+      "target": "dep:element-plus",
+      "type": "depends_on"
+    },
+    {
+      "source": "frontend/package.json",
+      "target": "dep:html2canvas",
+      "type": "depends_on"
+    },
+    {
+      "source": "frontend/package.json",
+      "target": "dep:jspdf",
+      "type": "depends_on"
+    },
+    {
+      "source": "frontend/package.json",
+      "target": "dep:luckysheet",
+      "type": "depends_on"
+    },
+    {
+      "source": "frontend/package.json",
+      "target": "dep:pinia",
+      "type": "depends_on"
+    },
+    {
+      "source": "frontend/package.json",
+      "target": "dep:vue",
+      "type": "depends_on"
     }
   ],
   "metadata": {
     "project": "D:\\project\\aicoding\\XReport",
     "project_name": "XReport",
-    "analyzed_at": "2026-04-14T22:00:36.864884",
+    "analyzed_at": "2026-04-15T18:44:25.285488",
     "stats": {
-      "total_files": 26,
-      "code_files": 17,
-      "doc_files": 3,
-      "config_files": 4,
-      "total_lines": 9914,
+      "total_files": 355,
+      "code_files": 120,
+      "doc_files": 31,
+      "config_files": 16,
+      "total_lines": 38142,
       "languages": {
         "TypeScript": 7,
-        "TypeScript (TSX)": 10
+        "JavaScript": 6,
+        "TypeScript (TSX)": 10,
+        "Java": 97
       }
     }
   }
