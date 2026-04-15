@@ -1,9 +1,0 @@
-com\xreport\common\util\PasswordEncoder.class
-com\xreport\common\exception\BusinessException.class
-com\xreport\common\result\Result.class
-com\xreport\common\util\JwtUtils.class
-com\xreport\common\util\JdbcUtils.class
-com\xreport\common\XReportApplication.class
-com\xreport\common\constant\Constants.class
-com\xreport\common\util\IdWorker.class
-com\xreport\common\result\ResultCode.class
