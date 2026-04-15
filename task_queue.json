@@ -1,0 +1,142 @@
+[
+  {
+    "id": "phase-2",
+    "description": "Phase 2: 报表设计器核心：Luckysheet 集成 + 模板 CRUD",
+    "status": "done",
+    "phase": "Phase 2",
+    "retry_count": 0,
+    "max_retries": 3,
+    "error": null,
+    "created": "2026-04-15 13:05:05",
+    "updated": "2026-04-15 13:50:35",
+    "started_at": "2026-04-15 13:36:02",
+    "finished_at": "2026-04-15 13:50:35",
+    "duration_s": 873.0,
+    "constraints": {
+      "project_type": "Vue3 + SpringBoot",
+      "key_files": "frontend/src/views/report/, backend/src/main/java/com/xreport/controller/ReportTplController.java",
+      "tech_stack": "Vue3 + Vite + Luckysheet + ElementPlus, SpringBoot + MyBatis-Plus"
+    },
+    "source_doc": "docs/PHASE_2_task.md"
+  },
+  {
+    "id": "phase-3",
+    "description": "Phase 3: 数据源管理：JDBC多数据库连接 + API数据源",
+    "status": "done",
+    "phase": "Phase 3",
+    "retry_count": 0,
+    "max_retries": 3,
+    "error": null,
+    "created": "2026-04-15 13:05:05",
+    "updated": "2026-04-15 13:55:27",
+    "started_at": "2026-04-15 13:50:40",
+    "finished_at": "2026-04-15 13:55:27",
+    "duration_s": 287.0,
+    "constraints": {
+      "project_type": "Vue3 + SpringBoot",
+      "key_files": "backend/src/main/java/com/xreport/controller/DatasourceController.java",
+      "tech_stack": "Druid连接池, RestTemplate, Spring Boot"
+    },
+    "source_doc": "docs/PHASE_3_task.md"
+  },
+  {
+    "id": "phase-4",
+    "description": "Phase 4: 数据集 + SQL查询 + 聚合计算引擎",
+    "status": "done",
+    "phase": "Phase 4",
+    "retry_count": 0,
+    "max_retries": 3,
+    "error": null,
+    "created": "2026-04-15 13:05:05",
+    "updated": "2026-04-15 14:01:50",
+    "started_at": "2026-04-15 13:55:32",
+    "finished_at": "2026-04-15 14:01:50",
+    "duration_s": 378.0,
+    "constraints": {
+      "project_type": "Vue3 + SpringBoot",
+      "key_files": "backend/src/main/java/com/xreport/service/ReportDatasetService.java",
+      "tech_stack": "MyBatis-Plus + SQL解析 + 内存计算"
+    },
+    "source_doc": "docs/PHASE_4_task.md"
+  },
+  {
+    "id": "phase-5",
+    "description": "Phase 5: 报表预览 + 导出（Excel/PDF）",
+    "status": "done",
+    "phase": "Phase 5",
+    "retry_count": 0,
+    "max_retries": 3,
+    "error": null,
+    "created": "2026-04-15 13:05:05",
+    "updated": "2026-04-15 14:08:39",
+    "started_at": "2026-04-15 14:01:55",
+    "finished_at": "2026-04-15 14:08:39",
+    "duration_s": 404.0,
+    "constraints": {
+      "project_type": "Vue3 + SpringBoot",
+      "key_files": "frontend/src/views/report/Preview.vue",
+      "tech_stack": "Luckysheet render, poi, jsPDF"
+    },
+    "source_doc": "docs/PHASE_5_task.md"
+  },
+  {
+    "id": "phase-6",
+    "description": "Phase 6: Word模板引擎（poi-tl）",
+    "status": "done",
+    "phase": "Phase 6",
+    "retry_count": 0,
+    "max_retries": 3,
+    "error": null,
+    "created": "2026-04-15 13:05:05",
+    "updated": "2026-04-15 14:18:32",
+    "started_at": "2026-04-15 14:08:44",
+    "finished_at": "2026-04-15 14:18:32",
+    "duration_s": 588.0,
+    "constraints": {
+      "project_type": "Vue3 + SpringBoot",
+      "key_files": "backend/src/main/java/com/xreport/service/WordTemplateService.java",
+      "tech_stack": "poi-tl, Word模板标记"
+    },
+    "source_doc": "docs/PHASE_6_task.md"
+  },
+  {
+    "id": "phase-7",
+    "description": "Phase 7: 大屏设计器",
+    "status": "done",
+    "phase": "Phase 7",
+    "retry_count": 0,
+    "max_retries": 3,
+    "error": null,
+    "created": "2026-04-15 13:05:05",
+    "updated": "2026-04-15 14:26:29",
+    "started_at": "2026-04-15 14:18:37",
+    "finished_at": "2026-04-15 14:26:29",
+    "duration_s": 472.0,
+    "constraints": {
+      "project_type": "Vue3 + SpringBoot",
+      "key_files": "frontend/src/views/dashboard/",
+      "tech_stack": "Vue3 + Echarts + 大屏布局"
+    },
+    "source_doc": "docs/PHASE_7_task.md"
+  },
+  {
+    "id": "phase-8",
+    "description": "Phase 8: 权限系统 + 分享功能",
+    "status": "done",
+    "phase": "Phase 8",
+    "retry_count": 0,
+    "max_retries": 3,
+    "error": null,
+    "created": "2026-04-15 13:05:05",
+    "updated": "2026-04-15 14:34:23",
+    "started_at": "2026-04-15 14:26:34",
+    "finished_at": "2026-04-15 14:34:23",
+    "duration_s": 469.0,
+    "constraints": {
+      "project_type": "Vue3 + SpringBoot",
+      "key_files": "backend/src/main/java/com/xreport/security/, frontend/src/views/share/",
+      "tech_stack": "Spring Security + UUID分享链接"
+    },
+    "source_doc": "docs/PHASE_8_task.md"
+  }
+]

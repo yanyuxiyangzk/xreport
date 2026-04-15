@@ -1,0 +1,6 @@
+com\xreport\integration\DatasetIntegrationTest.class
+com\xreport\integration\DatasourceIntegrationTest.class
+com\xreport\integration\TestSecurityHelper.class
+com\xreport\integration\TestApplication.class
+com\xreport\integration\AuthenticationIntegrationTest.class
+com\xreport\integration\ReportIntegrationTest.class
