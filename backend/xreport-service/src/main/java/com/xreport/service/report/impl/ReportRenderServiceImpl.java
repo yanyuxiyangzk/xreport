@@ -14,6 +14,8 @@ import com.xreport.service.report.IReportTplService;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
+import org.apache.poi.xwpf.usermodel.XWPFTable;
+import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -144,7 +146,21 @@ public class ReportRenderServiceImpl implements IReportRenderService {
 
                 if (data != null && !data.isEmpty()) {
                     com.alibaba.excel.write.metadata.WriteSheet writeSheet = EasyExcel.writerSheet(i, sheetName).build();
-                    excelWriter.write(dataToList(data), writeSheet);
+                    // Create header from first row's keys
+                    List<String> headers = new ArrayList<>(data.get(0).keySet());
+                    List<List<String>> headRows = new ArrayList<>();
+                    headRows.add(headers);
+                    excelWriter.write(headRows, writeSheet);
+                    // Write data rows matching header order
+                    List<List<Object>> dataRows = new ArrayList<>();
+                    for (Map<String, Object> row : data) {
+                        List<Object> rowList = new ArrayList<>();
+                        for (String key : headers) {
+                            rowList.add(row.get(key));
+                        }
+                        dataRows.add(rowList);
+                    }
+                    excelWriter.write(dataRows, writeSheet);
                 }
             }
 
@@ -154,18 +170,6 @@ public class ReportRenderServiceImpl implements IReportRenderService {
             log.error("导出Excel失败", e);
             throw new BusinessException("导出Excel失败: " + e.getMessage());
         }
-    }
-
-    private List<List<Object>> dataToList(List<Map<String, Object>> data) {
-        if (data == null || data.isEmpty()) {
-            return new ArrayList<>();
-        }
-        List<List<Object>> result = new ArrayList<>();
-        for (Map<String, Object> row : data) {
-            List<Object> rowList = new ArrayList<>(row.values());
-            result.add(rowList);
-        }
-        return result;
     }
 
     private byte[] exportToPdf(Map<String, Object> renderData) {
@@ -185,10 +189,38 @@ public class ReportRenderServiceImpl implements IReportRenderService {
                 document.add(new com.itextpdf.text.Paragraph(" "));
 
                 List<Map<String, Object>> data = (List<Map<String, Object>>) sheetData.get("data");
-                if (data != null) {
-                    for (Map<String, Object> row : data) {
-                        document.add(new com.itextpdf.text.Paragraph(row.toString()));
+                if (data != null && !data.isEmpty()) {
+                    // Get headers from first row
+                    List<String> headers = new ArrayList<>(data.get(0).keySet());
+                    int colCount = headers.size();
+
+                    // Create PDF table
+                    com.itextpdf.text.pdf.PdfPTable table = new com.itextpdf.text.pdf.PdfPTable(colCount);
+                    table.setWidthPercentage(100);
+
+                    // Add header row
+                    com.itextpdf.text.Font headerFont = com.itextpdf.text.FontFactory.getFont(com.itextpdf.text.FontFactory.HELVETICA_BOLD, 10);
+                    for (String header : headers) {
+                        com.itextpdf.text.pdf.PdfPCell cell = new com.itextpdf.text.pdf.PdfPCell(new com.itextpdf.text.Phrase(header, headerFont));
+                        cell.setBackgroundColor(com.itextpdf.text.BaseColor.LIGHT_GRAY);
+                        cell.setHorizontalAlignment(com.itextpdf.text.Element.ALIGN_CENTER);
+                        cell.setPadding(5);
+                        table.addCell(cell);
                     }
+
+                    // Add data rows
+                    com.itextpdf.text.Font dataFont = com.itextpdf.text.FontFactory.getFont(com.itextpdf.text.FontFactory.HELVETICA, 9);
+                    for (Map<String, Object> row : data) {
+                        for (String key : headers) {
+                            Object value = row.get(key);
+                            String cellText = value != null ? value.toString() : "";
+                            com.itextpdf.text.pdf.PdfPCell cell = new com.itextpdf.text.pdf.PdfPCell(new com.itextpdf.text.Phrase(cellText, dataFont));
+                            cell.setPadding(4);
+                            table.addCell(cell);
+                        }
+                    }
+
+                    document.add(table);
                 }
                 document.add(new com.itextpdf.text.Paragraph(" "));
             }
@@ -222,11 +254,33 @@ public class ReportRenderServiceImpl implements IReportRenderService {
                 sheetRun.setFontSize(14);
 
                 List<Map<String, Object>> data = (List<Map<String, Object>>) sheetData.get("data");
-                if (data != null) {
+                if (data != null && !data.isEmpty()) {
+                    // Get headers from first row
+                    List<String> headers = new ArrayList<>(data.get(0).keySet());
+                    int colCount = headers.size();
+
+                    // Create Word table
+                    XWPFTable table = document.createTable(1, colCount);
+
+                    // Set header row
+                    XWPFTableRow headerRow = table.getRow(0);
+                    for (int i = 0; i < headers.size(); i++) {
+                        XWPFParagraph para = headerRow.getCell(i).getParagraphs().get(0);
+                        XWPFRun run = para.createRun();
+                        run.setText(headers.get(i));
+                        run.setBold(true);
+                    }
+
+                    // Add data rows
                     for (Map<String, Object> row : data) {
-                        XWPFParagraph rowPara = document.createParagraph();
-                        XWPFRun rowRun = rowPara.createRun();
-                        rowRun.setText(row.toString());
+                        XWPFTableRow dataRow = table.createRow();
+                        for (int i = 0; i < headers.size(); i++) {
+                            Object value = row.get(headers.get(i));
+                            String cellText = value != null ? value.toString() : "";
+                            XWPFParagraph para = dataRow.getCell(i).getParagraphs().get(0);
+                            XWPFRun run = para.createRun();
+                            run.setText(cellText);
+                        }
                     }
                 }
             }

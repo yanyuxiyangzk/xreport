@@ -66,6 +66,18 @@ const routes = [
     ]
   },
   {
+    path: '/word-template',
+    name: 'WordTemplate',
+    children: [
+      {
+        path: 'list',
+        name: 'WordTemplateList',
+        component: () => import('@/views/wordtemplate/List.vue'),
+        meta: { title: 'Word模板管理' }
+      }
+    ]
+  },
+  {
     path: '/share',
     name: 'Share',
     children: [

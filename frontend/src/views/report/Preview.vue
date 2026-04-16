@@ -23,6 +23,9 @@
                   <el-dropdown-item command="pdf">
                     <el-icon><Document /></el-icon> 导出PDF
                   </el-dropdown-item>
+                  <el-dropdown-item command="word">
+                    <el-icon><Document /></el-icon> 导出Word
+                  </el-dropdown-item>
                 </el-dropdown-menu>
               </template>
             </el-dropdown>
@@ -44,6 +47,7 @@ import { ElMessage } from 'element-plus'
 import { Document, ArrowDown } from '@element-plus/icons-vue'
 import LuckySheet from 'luckysheet'
 import { reportTplApi } from '@/api/report'
+import { exportApi } from '@/api/export'
 import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
 
@@ -135,6 +139,8 @@ const handleExportCommand = (command) => {
     handleExportExcel()
   } else if (command === 'pdf') {
     handleExportPDF()
+  } else if (command === 'word') {
+    handleExportWord()
   }
 }
 
@@ -150,7 +156,7 @@ const handleExportExcel = async () => {
 
     // 获取完整的模板数据并发送到服务端
     const templateData = await reportTplApi.loadFullTemplate(templateId.value)
-    const blob = await reportTplApi.exportExcelPost(templateData)
+    const blob = await exportApi.exportExcel(templateData)
 
     // 创建下载链接
     const url = window.URL.createObjectURL(new Blob([blob], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }))
@@ -203,6 +209,37 @@ const handleExportPDF = async () => {
   } catch (error) {
     console.error('导出PDF失败:', error)
     ElMessage.error('导出PDF失败')
+  }
+}
+
+// 导出Word - 通过服务端API
+const handleExportWord = async () => {
+  if (!templateId.value) {
+    ElMessage.error('模板ID不能为空')
+    return
+  }
+
+  try {
+    ElMessage.info('正在导出Word...')
+
+    // 获取完整的模板数据并发送到服务端
+    const templateData = await reportTplApi.loadFullTemplate(templateId.value)
+    const blob = await exportApi.exportWord(templateData)
+
+    // 创建下载链接
+    const url = window.URL.createObjectURL(new Blob([blob], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' }))
+    const link = document.createElement('a')
+    link.href = url
+    link.setAttribute('download', `${templateName.value || 'report'}.docx`)
+    document.body.appendChild(link)
+    link.click()
+    link.parentNode.removeChild(link)
+    window.URL.revokeObjectURL(url)
+
+    ElMessage.success('Word导出成功')
+  } catch (error) {
+    console.error('导出Word失败:', error)
+    ElMessage.error('导出Word失败')
   }
 }
 

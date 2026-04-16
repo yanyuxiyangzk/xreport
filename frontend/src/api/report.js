@@ -87,7 +87,18 @@ export const reportTplApi = {
   // 导出Excel（POST方式）
   exportExcelPost: (templateData) => {
     const token = localStorage.getItem('token')
-    return request.post('/report/tpl/export/excel', templateData, {
+    return request.post('/report/tpls/export/excel', templateData, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+      responseType: 'blob'
+    })
+  },
+
+  // 导出Word（POST方式）
+  exportWordPost: (templateData) => {
+    const token = localStorage.getItem('token')
+    return request.post('/report/tpls/export/word', templateData, {
       headers: {
         Authorization: `Bearer ${token}`
       },

@@ -118,4 +118,22 @@ public class ReportTplController {
     public Result<FullTemplateResponse> loadFullTemplate(@PathVariable Long tplId) {
         return Result.ok(tplService.loadFullTemplate(tplId));
     }
+
+    @PostMapping("/export/excel")
+    public Result<byte[]> exportExcel(@RequestBody FullTemplateResponse templateData) {
+        byte[] data = renderService.exportReport(templateData.getId(), "excel", null);
+        return Result.ok(data);
+    }
+
+    @PostMapping("/export/word")
+    public Result<byte[]> exportWord(@RequestBody FullTemplateResponse templateData) {
+        byte[] data = renderService.exportReport(templateData.getId(), "word", null);
+        return Result.ok(data);
+    }
+
+    @PostMapping("/export/pdf")
+    public Result<byte[]> exportPdf(@RequestBody FullTemplateResponse templateData) {
+        byte[] data = renderService.exportReport(templateData.getId(), "pdf", null);
+        return Result.ok(data);
+    }
 }
