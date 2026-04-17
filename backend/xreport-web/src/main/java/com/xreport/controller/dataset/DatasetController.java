@@ -49,7 +49,7 @@ public class DatasetController {
     @PostMapping
     public Result<Void> add(@RequestBody ReportDataset dataset) {
         // 设置创建用户ID（从JWT获取）
-        Long userId = (Long) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Long userId = Long.parseLong(SecurityContextHolder.getContext().getAuthentication().getName());
         dataset.setCreateUserId(userId);
         datasetService.add(dataset);
         return Result.ok();

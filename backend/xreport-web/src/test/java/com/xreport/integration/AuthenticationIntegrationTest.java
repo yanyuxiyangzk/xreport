@@ -181,7 +181,7 @@ public class AuthenticationIntegrationTest {
                 .get("/api/auth/userinfo");
 
         MvcResult result = mockMvc.perform(requestBuilder)
-                .andExpect(status().isOk())
+                .andExpect(status().isUnauthorized())
                 .andReturn();
 
         String content = result.getResponse().getContentAsString();
@@ -210,7 +210,7 @@ public class AuthenticationIntegrationTest {
                 .header("Authorization", "Bearer invalid.token.here");
 
         MvcResult result = mockMvc.perform(requestBuilder)
-                .andExpect(status().isOk())
+                .andExpect(status().isUnauthorized())
                 .andReturn();
 
         String content = result.getResponse().getContentAsString();
@@ -235,7 +235,7 @@ public class AuthenticationIntegrationTest {
         // 生成一个过期的token（使用负的过期时间）
         String expiredToken = com.xreport.common.util.JwtUtils.generateToken(
                 1L, "admin",
-                "xreport-jwt-secret-key-must-be-at-least-512-bits-long-for-hs512",
+                "xreport-jwt-secret-key-must-be-at-least-512-bits-long-for-hs512algorithm",
                 -1000L // 负的过期时间，导致立即过期
         );
 
@@ -244,7 +244,7 @@ public class AuthenticationIntegrationTest {
                 .header("Authorization", "Bearer " + expiredToken);
 
         MvcResult result = mockMvc.perform(requestBuilder)
-                .andExpect(status().isOk())
+                .andExpect(status().isUnauthorized())
                 .andReturn();
 
         String content = result.getResponse().getContentAsString();

@@ -35,7 +35,7 @@ public class AuthController {
 
     @GetMapping("/userinfo")
     public Result<LoginUserVo> getUserInfo() {
-        Long userId = (Long) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Long userId = Long.parseLong(SecurityContextHolder.getContext().getAuthentication().getName());
         SysUser user = userService.getById(userId);
         LoginUserVo vo = new LoginUserVo(
             user.getId(), user.getUsername(), user.getNickname(), user.getEmail(), user.getCreateTime()

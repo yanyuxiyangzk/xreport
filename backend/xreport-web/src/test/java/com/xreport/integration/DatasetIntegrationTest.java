@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -49,15 +48,10 @@ public class DatasetIntegrationTest {
     private IAuthService authService;
 
     private TestSecurityHelper securityHelper;
-    private String adminToken;
-
-    private static final String TEST_USERNAME = "admin";
-    private static final String TEST_PASSWORD = "admin123";
 
     @BeforeEach
-    void setUp() throws Exception {
+    void setUp() {
         securityHelper = new TestSecurityHelper(mockMvc, objectMapper, authService, null);
-        adminToken = loginAndGetToken(TEST_USERNAME, TEST_PASSWORD);
     }
 
     @Test
@@ -68,12 +62,9 @@ public class DatasetIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/datasets")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(dataset))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -98,12 +89,9 @@ public class DatasetIntegrationTest {
     void testQueryDatasets() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/datasets")
-                .header("Authorization", "Bearer " + adminToken)
                 .param("pageNum", "1")
                 .param("pageSize", "10")
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -126,10 +114,7 @@ public class DatasetIntegrationTest {
     void testGetDatasetById() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/datasets/1")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -160,12 +145,9 @@ public class DatasetIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .put("/api/datasets/1")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(dataset))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -186,17 +168,9 @@ public class DatasetIntegrationTest {
     @Order(5)
     @DisplayName("测试删除数据集")
     void testDeleteDataset() throws Exception {
-        // First create a dataset to delete
-        String uniqueCode = "ds_to_delete_" + System.currentTimeMillis();
-        ReportDataset dataset = createTestDataset("Dataset To Delete", uniqueCode);
-        createDataset(dataset);
-
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .delete("/api/datasets/1")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -218,10 +192,7 @@ public class DatasetIntegrationTest {
     void testListEnabledDatasets() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/datasets/enabled")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -247,12 +218,9 @@ public class DatasetIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/datasets/query")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(requestBody))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -282,12 +250,9 @@ public class DatasetIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/datasets/preview")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(requestBody))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -313,12 +278,9 @@ public class DatasetIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/datasets/query")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(requestBody))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -338,20 +300,15 @@ public class DatasetIntegrationTest {
     @Order(10)
     @DisplayName("测试SQL聚合计算 - SUM")
     void testSqlAggregationSum() throws Exception {
-        // This test assumes there's a numeric field to sum
-        // In the test database, we don't have such a field, but we test the endpoint works
         Map<String, Object> requestBody = new HashMap<>();
         requestBody.put("datasetId", 1L);
         requestBody.put("params", new HashMap<String, Object>());
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/datasets/query")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(requestBody))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -377,12 +334,9 @@ public class DatasetIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/datasets/query")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(requestBody))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -408,12 +362,9 @@ public class DatasetIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/datasets/query")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(requestBody))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -433,16 +384,12 @@ public class DatasetIntegrationTest {
     @Order(13)
     @DisplayName("测试无权限访问数据集接口")
     void testUnauthorizedDatasetAccess() throws Exception {
-        // Use a token without report:manage authority
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/datasets")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("2").claim("username", "testuser"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("ROLE_USER")));
+                .with(securityHelper.mockJwt(2L, List.of("ROLE_USER")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
-                .andExpect(status().isOk())
+                .andExpect(status().isForbidden())
                 .andReturn();
 
         String content = result.getResponse().getContentAsString();
@@ -460,27 +407,6 @@ public class DatasetIntegrationTest {
         System.out.println("========================================");
     }
 
-    // ==================== Helper Methods ====================
-
-    private String loginAndGetToken(String username, String password) throws Exception {
-        UserLoginRequest request = new UserLoginRequest();
-        request.setUsername(username);
-        request.setPassword(password);
-
-        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
-                .post("/api/auth/login")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(request));
-
-        MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-        String content = result.getResponse().getContentAsString();
-        @SuppressWarnings("unchecked")
-        Map<String, Object> responseMap = objectMapper.readValue(content, Map.class);
-        @SuppressWarnings("unchecked")
-        Map<String, Object> dataMap = (Map<String, Object>) responseMap.get("data");
-        return (String) dataMap.get("token");
-    }
-
     private ReportDataset createTestDataset(String name, String code) {
         ReportDataset dataset = new ReportDataset();
         dataset.setDatasetName(name);
@@ -494,18 +420,5 @@ public class DatasetIntegrationTest {
         dataset.setTenantId(1L);
         dataset.setCreateUserId(1L);
         return dataset;
-    }
-
-    private void createDataset(ReportDataset dataset) throws Exception {
-        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
-                .post("/api/datasets")
-                .header("Authorization", "Bearer " + adminToken)
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(dataset))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
-
-        mockMvc.perform(requestBuilder);
     }
 }

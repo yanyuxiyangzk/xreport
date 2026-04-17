@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AuthServiceImpl implements IAuthService {
 
-    private static final String JWT_SECRET = "xreport-jwt-secret-key-must-be-at-least-512-bits-long-for-hs512";
+    private static final String JWT_SECRET = "xreport-jwt-secret-key-must-be-at-least-512-bits-long-for-hs512algorithm";
     private static final long EXPIRE_TIME = 86400000L;
 
     private final ISysUserService userService;

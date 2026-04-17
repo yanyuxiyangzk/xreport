@@ -3,11 +3,11 @@
 -- Default admin user: admin / admin123
 
 INSERT INTO sys_user (id, username, password, nickname, email, phone, status, del_flag, tenant_id, create_time)
-VALUES (1, 'admin', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EH', 'Administrator', 'admin@example.com', '13800138000', 1, 0, 1, CURRENT_TIMESTAMP)
+VALUES (1, 'admin', '$2a$10$ftOp2n0D1EKQaaZT7L8IR.PAnXY.FoiMjCiSfAFikdf7BgEOcsPnO', 'Administrator', 'admin@example.com', '13800138000', 1, 0, 1, CURRENT_TIMESTAMP)
 ON DUPLICATE KEY UPDATE username=username;
 
 INSERT INTO sys_user (id, username, password, nickname, email, phone, status, del_flag, tenant_id, create_time)
-VALUES (2, 'testuser', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EH', 'Test User', 'test@example.com', '13900139000', 1, 0, 1, CURRENT_TIMESTAMP)
+VALUES (2, 'testuser', '$2a$10$ftOp2n0D1EKQaaZT7L8IR.PAnXY.FoiMjCiSfAFikdf7BgEOcsPnO', 'Test User', 'test@example.com', '13900139000', 1, 0, 1, CURRENT_TIMESTAMP)
 ON DUPLICATE KEY UPDATE username=username;
 
 -- Insert test roles

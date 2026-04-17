@@ -6,6 +6,8 @@ import com.xreport.common.result.ResultCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -41,6 +43,36 @@ public class GlobalExceptionHandler {
                 .collect(Collectors.joining(", "));
         log.warn("参数校验失败: {}", message);
         return Result.fail(ResultCode.VALIDATE_FAILED, message);
+    }
+
+    /**
+     * 处理 Spring Security 访问被拒绝异常
+     */
+    @ExceptionHandler(AccessDeniedException.class)
+    @ResponseStatus(HttpStatus.FORBIDDEN)
+    public Result<Void> handleAccessDeniedException(AccessDeniedException e) {
+        log.warn("访问被拒绝: {}", e.getMessage());
+        return Result.fail(403, "访问被拒绝: " + e.getMessage());
+    }
+
+    /**
+     * 处理 Spring Security 认证异常
+     */
+    @ExceptionHandler(AuthenticationException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    public Result<Void> handleAuthenticationException(AuthenticationException e) {
+        log.warn("认证失败: {}", e.getMessage());
+        return Result.fail(401, "认证失败: " + e.getMessage());
+    }
+
+    /**
+     * 处理数字格式异常（通常是未认证用户访问受保护资源）
+     */
+    @ExceptionHandler(NumberFormatException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    public Result<Void> handleNumberFormatException(NumberFormatException e) {
+        log.warn("数字格式异常（可能是未认证访问）: {}", e.getMessage());
+        return Result.fail(401, "未认证或认证信息无效");
     }
 
     /**

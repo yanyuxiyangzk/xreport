@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -46,16 +45,10 @@ public class DatasourceIntegrationTest {
     private IAuthService authService;
 
     private TestSecurityHelper securityHelper;
-    private String adminToken;
-
-    private static final String TEST_USERNAME = "admin";
-    private static final String TEST_PASSWORD = "admin123";
 
     @BeforeEach
-    void setUp() throws Exception {
+    void setUp() {
         securityHelper = new TestSecurityHelper(mockMvc, objectMapper, authService, null);
-        // Login as admin to get token with proper permissions
-        adminToken = loginAndGetToken(TEST_USERNAME, TEST_PASSWORD);
     }
 
     @Test
@@ -66,12 +59,9 @@ public class DatasourceIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/datasources")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(datasource))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("datasource:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "datasource:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -103,12 +93,9 @@ public class DatasourceIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/datasources")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(datasource))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("datasource:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "datasource:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -133,12 +120,9 @@ public class DatasourceIntegrationTest {
     void testQueryDatasources() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/datasources")
-                .header("Authorization", "Bearer " + adminToken)
                 .param("pageNum", "1")
                 .param("pageSize", "10")
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("datasource:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "datasource:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -165,10 +149,7 @@ public class DatasourceIntegrationTest {
     void testGetDatasourceById() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/datasources/1")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("datasource:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "datasource:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -197,12 +178,9 @@ public class DatasourceIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .put("/api/datasources/1")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(datasource))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("datasource:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "datasource:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -223,16 +201,9 @@ public class DatasourceIntegrationTest {
     @Order(6)
     @DisplayName("测试删除数据源")
     void testDeleteDatasource() throws Exception {
-        // First create a datasource to delete
-        ReportDatasource datasource = createTestDatasource("DS To Delete");
-        Long newDsId = createAndGetDatasourceId(datasource);
-
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
-                .delete("/api/datasources/" + newDsId)
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("datasource:manage")));
+                .delete("/api/datasources/1")
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "datasource:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -242,7 +213,7 @@ public class DatasourceIntegrationTest {
         System.out.println("========================================");
         System.out.println("测试报告: 删除数据源");
         System.out.println("----------------------------------------");
-        System.out.println("请求: DELETE /api/datasources/" + newDsId);
+        System.out.println("请求: DELETE /api/datasources/1");
         System.out.println("响应状态: " + result.getResponse().getStatus());
         System.out.println("测试结果: 通过");
         System.out.println("========================================");
@@ -254,10 +225,7 @@ public class DatasourceIntegrationTest {
     void testListEnabledDatasources() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/datasources/enabled")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("datasource:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "datasource:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -285,7 +253,8 @@ public class DatasourceIntegrationTest {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/datasources/test/jdbc")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(params));
+                .content(objectMapper.writeValueAsString(params))
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "datasource:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -313,7 +282,8 @@ public class DatasourceIntegrationTest {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/datasources/test/jdbc")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(params));
+                .content(objectMapper.writeValueAsString(params))
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "datasource:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -338,16 +308,12 @@ public class DatasourceIntegrationTest {
     @Order(10)
     @DisplayName("测试无权限访问数据源接口")
     void testUnauthorizedDatasourceAccess() throws Exception {
-        // Use a token without datasource:manage authority
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/datasources")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("2").claim("username", "testuser"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("ROLE_USER")));
+                .with(securityHelper.mockJwt(2L, List.of("ROLE_USER")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
-                .andExpect(status().isOk())
+                .andExpect(status().isForbidden())
                 .andReturn();
 
         String content = result.getResponse().getContentAsString();
@@ -365,27 +331,6 @@ public class DatasourceIntegrationTest {
         System.out.println("========================================");
     }
 
-    // ==================== Helper Methods ====================
-
-    private String loginAndGetToken(String username, String password) throws Exception {
-        UserLoginRequest request = new UserLoginRequest();
-        request.setUsername(username);
-        request.setPassword(password);
-
-        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
-                .post("/api/auth/login")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(request));
-
-        MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-        String content = result.getResponse().getContentAsString();
-        @SuppressWarnings("unchecked")
-        Map<String, Object> responseMap = objectMapper.readValue(content, Map.class);
-        @SuppressWarnings("unchecked")
-        Map<String, Object> dataMap = (Map<String, Object>) responseMap.get("data");
-        return (String) dataMap.get("token");
-    }
-
     private ReportDatasource createTestDatasource(String name) {
         ReportDatasource datasource = new ReportDatasource();
         datasource.setDatasourceName(name);
@@ -397,19 +342,5 @@ public class DatasourceIntegrationTest {
         datasource.setTenantId(1L);
         datasource.setCreateUserId(1L);
         return datasource;
-    }
-
-    private Long createAndGetDatasourceId(ReportDatasource datasource) throws Exception {
-        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
-                .post("/api/datasources")
-                .header("Authorization", "Bearer " + adminToken)
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(datasource))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("datasource:manage")));
-
-        MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-        return 1L; // Return a fixed ID for simplicity in this test
     }
 }

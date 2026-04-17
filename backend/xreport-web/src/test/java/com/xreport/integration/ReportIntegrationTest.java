@@ -2,7 +2,6 @@ package com.xreport.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.xreport.pojo.dto.RenderRequest;
-import com.xreport.pojo.dto.UserLoginRequest;
 import com.xreport.pojo.entity.ReportTpl;
 import com.xreport.pojo.entity.reporttplsheet.ReportTplSheet;
 import com.xreport.service.auth.IAuthService;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -22,6 +20,7 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -48,15 +47,10 @@ public class ReportIntegrationTest {
     private IAuthService authService;
 
     private TestSecurityHelper securityHelper;
-    private String adminToken;
-
-    private static final String TEST_USERNAME = "admin";
-    private static final String TEST_PASSWORD = "admin123";
 
     @BeforeEach
-    void setUp() throws Exception {
+    void setUp() {
         securityHelper = new TestSecurityHelper(mockMvc, objectMapper, authService, null);
-        adminToken = loginAndGetToken(TEST_USERNAME, TEST_PASSWORD);
     }
 
     @Test
@@ -67,12 +61,9 @@ public class ReportIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/report/tpls")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(tpl))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -96,12 +87,9 @@ public class ReportIntegrationTest {
     void testQueryReportTemplates() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/report/tpls")
-                .header("Authorization", "Bearer " + adminToken)
                 .param("pageNum", "1")
                 .param("pageSize", "10")
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -124,10 +112,7 @@ public class ReportIntegrationTest {
     void testGetReportTemplateById() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/report/tpls/1")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -155,12 +140,9 @@ public class ReportIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .put("/api/report/tpls/1")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(tpl))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -181,16 +163,9 @@ public class ReportIntegrationTest {
     @Order(5)
     @DisplayName("测试删除报表模板")
     void testDeleteReportTemplate() throws Exception {
-        // First create a template to delete
-        ReportTpl tpl = createTestTemplate("Template To Delete");
-        createTemplate(tpl);
-
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .delete("/api/report/tpls/1")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -212,10 +187,7 @@ public class ReportIntegrationTest {
     void testGetTemplateSheets() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/report/tpls/1/sheets")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -242,12 +214,9 @@ public class ReportIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/report/tpls/1/sheets")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(sheet))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -276,12 +245,9 @@ public class ReportIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .put("/api/report/tpls/1/sheets/1")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(sheet))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -304,10 +270,7 @@ public class ReportIntegrationTest {
     void testDeleteTemplateSheet() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .delete("/api/report/tpls/1/sheets/1")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -329,10 +292,7 @@ public class ReportIntegrationTest {
     void testPublishTemplate() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/report/tpls/1/publish")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -354,10 +314,7 @@ public class ReportIntegrationTest {
     void testReportPreview() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/report/tpls/1/preview")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -391,12 +348,9 @@ public class ReportIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/report/render")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(request))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -425,12 +379,9 @@ public class ReportIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/report/export")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(request))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -458,12 +409,9 @@ public class ReportIntegrationTest {
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/report/export")
-                .header("Authorization", "Bearer " + adminToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(request))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
+                .with(securityHelper.mockJwt(1L, List.of("ROLE_ADMIN", "report:manage")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -484,16 +432,12 @@ public class ReportIntegrationTest {
     @Order(15)
     @DisplayName("测试无权限访问报表接口")
     void testUnauthorizedReportAccess() throws Exception {
-        // Use a token without report:manage authority
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/api/report/tpls")
-                .header("Authorization", "Bearer " + adminToken)
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("2").claim("username", "testuser"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("ROLE_USER")));
+                .with(securityHelper.mockJwt(2L, List.of("ROLE_USER")));
 
         MvcResult result = mockMvc.perform(requestBuilder)
-                .andExpect(status().isOk())
+                .andExpect(status().isForbidden())
                 .andReturn();
 
         String content = result.getResponse().getContentAsString();
@@ -511,27 +455,6 @@ public class ReportIntegrationTest {
         System.out.println("========================================");
     }
 
-    // ==================== Helper Methods ====================
-
-    private String loginAndGetToken(String username, String password) throws Exception {
-        UserLoginRequest request = new UserLoginRequest();
-        request.setUsername(username);
-        request.setPassword(password);
-
-        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
-                .post("/api/auth/login")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(request));
-
-        MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-        String content = result.getResponse().getContentAsString();
-        @SuppressWarnings("unchecked")
-        Map<String, Object> responseMap = objectMapper.readValue(content, Map.class);
-        @SuppressWarnings("unchecked")
-        Map<String, Object> dataMap = (Map<String, Object>) responseMap.get("data");
-        return (String) dataMap.get("token");
-    }
-
     private ReportTpl createTestTemplate(String name) {
         ReportTpl tpl = new ReportTpl();
         tpl.setTplName(name);
@@ -542,18 +465,5 @@ public class ReportIntegrationTest {
         tpl.setTenantId(1L);
         tpl.setCreateUserId(1L);
         return tpl;
-    }
-
-    private void createTemplate(ReportTpl tpl) throws Exception {
-        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
-                .post("/api/report/tpls")
-                .header("Authorization", "Bearer " + adminToken)
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(tpl))
-                .with(SecurityMockMvcRequestPostProcessors.jwt()
-                        .jwt(jwt -> jwt.subject("1").claim("username", "admin"))
-                        .authorities(new org.springframework.security.core.authority.SimpleGrantedAuthority("report:manage")));
-
-        mockMvc.perform(requestBuilder);
     }
 }
