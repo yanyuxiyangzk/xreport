@@ -1,0 +1,509 @@
+# 开发任务
+
+## 项目名称
+XReport
+
+## 项目路径
+D:\project\aicoding\XReport
+
+## 用户需求
+为XReport项目backend模块补充Controller层单元测试。具体任务：1) 在xreport-web模块新建测试文件ReportTplControllerTest.java，至少10个测试用例，用@WebMvcTest+MockMvc覆盖：list分页API、createTemplate、updateTemplate、deleteTemplate、getTemplateById、publishTemplate等端点；2) 在xreport-web模块新建DatasetControllerTest.java，至少8个测试用例覆盖：createDataset、updateDataset、deleteDataset、listDatasets、executeQuery等端点；3) 在xreport-web模块新建AuthControllerTest.java，至少6个测试用例覆盖：login、logout、getCurrentUser等端点；4) 使用@WebMvcTest注解mock对应Controller，使用MockMvc执行HTTP请求，验证响应状态码和JSON字段；5) 运行mvn test -pl xreport-web验证所有新测试通过；6) 测试文件必须真实写入磁盘。
+
+## 📚 知识库相关经验（来自 Wiki 知识库）
+请参考以下历史经验和避坑指南：
+
+## 📚 Wiki 知识库相关记录
+
+### [[projects/XReport/]]
+*报表平台（Phase 0-8已完成）*
+(详细内容需在 wiki 中查看)
+
+
+---
+
+
+## 🚀 进化洞察（来自最近7天反馈）
+
+### 📁 XReport
+
+**✅ 最近成功模式（可参考复用）**
+1. **后端开发**: 为XReport项目backend模块补充单元测试，目标覆盖ReportTplService、ReportDatasourceService、ReportTpl → 任务执行成功(首次执行)
+2. **前端开发**: 为XReport项目强化CP6单元测试覆盖率。目标：将Java测试覆盖率从22%提升到35%以上，前端测试覆盖率从18%提升到30%以上。具体任务：1) 分析现 → 任务执行成功(首次执行)
+3. **后端开发**: Fix 41 failing Phase 9 integration tests in XReport backend. Run mvn clean test  → 任务执行成功(首次执行)
+4. **后端开发**: Phase 9: 为 XReport 后端补充 Java 单元测试，覆盖 Service 层和 Mapper 层。优先测试核心 Service（AuthServ → 任务执行成功(首次执行)
+5. **后端开发**: Phase 9: 为 XReport 后端补充 Java 单元测试，覆盖 Service 层和 Mapper 层。优先测试核心 Service（AuthServ → 任务执行成功(首次执行)
+
+**❌ 最近失败模式（需避免）**
+1. **系统集成**: Phase 2: XReport 报表设计器 Luckysheet 集成 → ⚠️ 未知原因
+2. **后端开发**: Phase 2: 为 XReport 项目实现报表设计器核心功能 - Luckysheet 集成 + 模板 CRUD。需 → ⚠️ Windows路径语法错误
+3. **后端开发**: Phase 2: 为 XReport 项目实现报表设计器核心功能 - Luckysheet 集成 + 模板 CRUD。需 → ⚠️ Windows路径语法错误
+4. **后端开发**: Phase 2: 为 XReport 项目实现报表设计器核心功能 - Luckysheet 集成 + 模板 CRUD。需 → ⚠️ Windows路径语法错误
+5. **后端开发**: Phase 2: 为 XReport 项目实现报表设计器核心功能 - Luckysheet 集成 + 模板 CRUD。需 → ⚠️ 任务执行失败
+
+---
+
+
+
+
+## 🗺️ 图谱上下文（项目结构 + 相关文件）
+**🗺️ 图谱相关文件（项目结构 + 依赖关系）**
+
+_Java（97个相关，显示前6）_
+- `backend/xreport-common/src/main/java/com/xreport/common/XReportApplication.java`
+- `backend/xreport-common/src/main/java/com/xreport/common/constant/Constants.java`
+- `backend/xreport-common/src/main/java/com/xreport/common/exception/BusinessException.java`
+- `backend/xreport-common/src/main/java/com/xreport/common/result/Result.java`
+- `backend/xreport-common/src/main/java/com/xreport/common/result/ResultCode.java`
+- `backend/xreport-common/src/main/java/com/xreport/common/util/IdWorker.java`
+
+
+---
+
+
+
+## 🎯 执行工具选择
+
+- **选定工具**: `claude` 🟢 (置信度: high) | 历史: 1成功/0失败 = 100.0%
+- **推荐 Agent**: `backend-dev`
+- **任务类型**: `backend`
+- **执行引擎**: Claude Code via harness-orchestrator (完整Harness协议)
+- **选择理由**: 关键词匹配 [backend] score=6，历史成功率 100.0%，选择 claude
+
+## 🔁 历史模式参考
+在执行任务前,注意参考以下历史模式,避免重复犯错:
+
+### 成功模式(近期可复用做法)
+(暂无成功模式记录)
+
+### 失败模式(近期踩过的坑)
+(暂无失败模式记录)
+
+---
+
+## 项目上下文(来自 harness-context.md)
+请先阅读以下上下文,理解项目背景、规则和历史:
+
+```
+# Harness Context
+
+> ⭐ **AI 必读上下文** - 本文件是数字员工的记忆中枢
+> 
+> **重要提示**：每次任务执行前，必须先完整阅读本文件！
+> 
+> 最后更新: 2026-04-18 07:55
+> 同步模式: incremental
+
+---
+
+## 项目信息
+
+| 属性 | 值 |
+|------|-----|
+| 项目名称 | OpenClawHarness |
+| 项目路径 | `D:\project\aicoding\openclawharness` |
+| 最后同步时间 | 2026-04-18 07:55 |
+| 同步模式 | incremental |
+
+---
+
+
+## 知识图谱摘要
+
+| 指标 | 数值 |
+|------|------|
+| 节点数 | 492 |
+| 边数 | 445 |
+| 社区数 | 68 |
+
+### 节点类型分布
+- **doc**: 211
+- **config**: 188
+- **code**: 70
+- **other**: 23
+
+### 主要社区
+- 
+- OPENCLAWHARNESS
+- XReport
+- autonomous
+- cicd
+- docs/XReport复盘报告
+- docs/多工具协作需求
+- enforcement
+- evolution
+- harness-javascript/IO
+
+
+
+## 经验反馈
+
+共有 98 条反馈记录：
+
+### 成功模式 (68 条)
+- [2026-04-10_22-12-13_readme_success.md] # Correction: SUCCESS
+
+## 任务
+给 openclawharness 项目创建一个 README.md
+
+## 执行时间
+2026-04...
+- [2026-04-10_22-13-50_006a22e9.md] # Correction: SUCCESS
+
+## 任务
+给 openclawharness 项目创建一个 README.md
+
+## 执行时间
+2026-04...
+- [2026-04-11_18-30-10_a308c889.md] # Success: Task Completed Successfully
+
+## 任务
+测试任务：成功完成README创建
+
+## 执行时间
+2026-04...
+- [2026-04-11_18-47-42_changelog_success.md] # Correction: SUCCESS
+
+## 任务
+给 openclawharness 项目创建一个 CHANGELOG.md，记录版本历史 v1.0.0...
+- [2026-04-11_18-48-51_fc958900.md] # Success: Task Completed Successfully
+
+## 任务
+添加 CHANGELOG.md v1.0.0
+
+## 执行时间
+20...
+- [2026-04-11_18-49-02_fc6ad5de.md] # Correction: SUCCESS
+
+## 任务
+给项目添加一个 CHANGELOG.md，记录版本历史 v1.0.0
+
+## 执行时间
+2026-04...
+- [2026-04-11_18-51-52_817634d6.md] # Correction: SUCCESS
+
+## 任务
+给项目添加一个简单的示例配置文件 config.yaml，包含项目名称和版本号
+
+## 执行时间
+20...
+- [2026-04-11_19-06-02_version_success.md] # Correction: SUCCESS
+
+## 任务
+给项目添加一个 VERSION.txt，内容为 1.0.0
+
+## 执行时间
+2026-04-11 1...
+- [2026-04-11_19-06-39_320dfc0b.md] # Correction: SUCCESS
+
+## 任务
+给项目添加一个 VERSION.txt，内容为 1.0.0
+
+## 执行时间
+2026-04-11_1...
+- [2026-04-11_19-10-09_gitignore_success.md] # Correction: SUCCESS
+
+## 任务
+给项目添加一个 .gitignore 文件，包含常见的忽略规则（node_modules、__pyca...
+- ... 还有 58 条
+
+### 失败模式 (22 条)
+- [2026-04-10_21-57-17_40bdb656.md] # Correction: FAILURE
+<!-- LLM_ANALYSIS_DONE:2026-04-17-->
+
+## L3.5 LLM 根因分析
+
+**...
+- [2026-04-10_22-03-40_59a73cdc.md] # Correction: FAILURE
+<!-- LLM_ANALYSIS_DONE:2026-04-17-->
+
+## L3.5 LLM 根因分析
+
+**...
+- [2026-04-10_22-04-43_d41b9d61.md] # Correction: FAILURE
+<!-- LLM_ANALYSIS_DONE:2026-04-17-->
+
+## L3.5 LLM 根因分析
+
+**...
+- [2026-04-10_22-10-51_7390c27a.md] # Correction: FAILURE
+
+## 任务
+给 openclawharness 项目创建一个 README.md
+
+## 执行时间
+2026-04...
+- [2026-04-12_08-08-39_后端_claude_failure.md] # Correction: FAILURE - 自动分析
+<!-- LLM_ANALYSIS_DONE:2026-04-17-->
+
+## L3.5 LLM 根...
+- [2026-04-13_19-49-23_测试_codex_failure.md] # Correction: FAILURE - 自动分析
+<!-- LLM_ANALYSIS_DONE:2026-04-17-->
+
+## L3.5 LLM 根...
+- [2026-04-13_19-50-26_测试_codex_failure.md] # Correction: FAILURE - 自动分析
+<!-- LLM_ANALYSIS_DONE:2026-04-17-->
+
+## L3.5 LLM 根...
+- [2026-04-13_19-51-01_测试_codex_failure.md] # Correction: FAILURE - 自动分析
+<!-- LLM_ANALYSIS_DONE:2026-04-17-->
+
+## L3.5 LLM 根...
+- [2026-04-13_19-56-30_测试_claude_failure.md] # Correction: FAILURE - 自动分析
+<!-- LLM_ANALYSIS_DONE:2026-04-17-->
+
+## L3.5 LLM 根...
+- [2026-04-14_10-40-18_11b4cb7c.md] # Correction: FAILURE
+
+## 任务
+测试：读取 harness-context.md 并输出一句话确认环境正常
+
+## 执行时间
+2026...
+- ... 还有 12 条
+
+### 随手笔记 (8 条)
+- [2026-04-12_08-08-39_summary.md] 详情
+- [2026-04-13_19-49-23_summary.md] 详情
+- [2026-04-13_19-50-26_summary.md] 详情
+- [2026-04-13_19-51-01_summary.md] 详情
+- [2026-04-13_19-52-50_summary.md] 详情
+- [2026-04-13_19-56-30_summary.md] 详情
+- [2026-04-13_19-59-12_summary.md] 详情
+- [2026-04-13_20-00-10_summary.md] 详情
+
+
+
+## 编码规则
+
+> 本文件定义数字员工的编码规范和核心规则
+> AI 在执行开发任务时必须严格遵守
+
+---
+
+## 1. 代码质量规则
+
+### 1.1 必须遵循
+
+- [ ] 所有代码必须通过 ESLint / TSC 类型检查
+- [ ] 必须有单元测试覆盖核心逻辑
+- [ ] 禁止提交有 `console.error` 或未捕获异常的代码
+- [ ] 禁止提交硬编码的敏感信息（API Key、密码等）
+
+### 1.2 Git 提交规范
+
+```
+<type>(<scope>): <subject>
+
+type: feat | fix | docs | style | refactor | test | chore
+scope: 模块或功能名称
+subject: 简短描述（不超过 50 字）
+```
+
+### 1.3 PR 规范
+
+- [ ] PR 必须有清晰的描述
+- [ ] 必须关联对应的需求/工单
+- [ ] CI 必须通过才能合并
+- [ ] 必须有至少 1 人 review
+
+---
+
+## 2. 开发流程规则
+
+### 2.1 任务执行
+
+1. 读取 `harness-context.md` 获取项目上下文
+2. 任务执行前确认需求理解正确
+3. 任务完成后更新 `harness-context.md`
+4. 记录成功/失败模式到 `corrections/`
+
+### 2.2 反馈闭环
+
+- [ ] 任务成功后：执行 `self_improve_ops.py learn`
+- [ ] 任务失败后：执行 `self_improve_ops.py reflect`，分析原因
+- [ ] 每次任务后：执行 `sync_to_harness.py --mode incremental`
+
+---
+
+## 3. 安全规则
+
+### 3.1 禁止行为
+
+- ❌ 禁止将代码发送到外部服务（除必需的 API 调用）
+- ❌ 禁止在代码中硬编码凭据
+- ❌ 禁止跳过安全扫描
+- ❌ 禁止强制覆盖主分支
+
+### 3.2 凭据管理
+
+- 所有凭据必须通过环境变量或 `.env` 文件
+- `.env` 必须加入 `.gitignore`
+- 使用 `dotenv` 或类似库管理环境变量
+
+---
+
+## 4. 架构约束
+
+### 4.1 模块化
+
+- [ ] 每个模块职责单一
+- [ ] 模块间通过接口通信，禁止直接引用内部实现
+- [ ] 公共 API 必须有文档注释
+
+### 4.2 错误处理
+
+- [ ] 所有异步操作必须 try-catch
+- [ ] 错误必须记录日志（包含上下文）
+- [ ] 用户可见的错误必须有友好提示
+
+---
+
+## 5. Obsidian Vault 配置
+
+> Obsidian 是本项目的知识库，所有的笔记、架构文档、开发进展都同步到这里
+
+| 配置项 | 值 |
+|--------|-----|
+| Vault 路径 | `D:\project\aicoding\notebook\notebook` |
+| Vault 内项目目录 | `openclawharness/` |
+| CLI 命令 | `obsidian`（需在 Obsidian App 中启用：Settings → General → Command line interface）|
+
+### 5.1 Vault 维护规则
+
+- [ ] 每次 Phase 完成/重大决策后，同步笔记到 vault
+- [ ] 笔记目录结构：`openclawharness/{docs,notes,memory}/`
+- [ ] 同步后更新 `openclawharness/vault-sync.md` 的最后同步时间
+
+### 5.2 已知问题
+
+- ⚠️ Obsidian CLI 未注册到 PATH，需先在 Obsidian App 中启用 CLI
+
+---
+
+## 6. Karpathy 编码原则（⭐ 必读）
+
+> 来自 [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills)（27K+ stars），解决 LLM 编码四大通病：错误假设、管理混乱、过度复杂、副作用修改
+
+| 必读优先级 | 文件 |
+|-----------|------|
+| ⭐ **第一优先级** | `CLAUDE.md`（项目根目录，Claude Code 启动时自动读取）|
+| ⭐ **第一优先级** | `skills/karpathy-guidelines/SKILL.md`（完整中文对照版）|
+| 参考 | `RULES.md`（本文件的编码规则）|
+
+### 6.1 四大原则速查
+
+| 原则 | 核心 | 问题 |
+|------|------|------|
+| **Think Before Coding** | 不确定就问，别猜 | 假设导致方向错误 |
+| **Simplicity First** | 最小代码解决问题 | 过度设计难维护 |
+| **Surgical Changes** | 只改必须改的 | 改相邻代码引入 bug |
+| **Goal-Driven Execution** | 定义成功标准再动手 | 做到一半发现方向错 |
+
+### 6.2 自问检查清单（每次任务前必做）
+
+- [ ] 我理解了需求吗？有没有不确定的地方？
+- [ ] 有多个可行方案吗？我该选哪个？
+- [ ] 这是最简单的实现吗？有没有过度设计？
+- [ ] 我的改动范围是什么？有没有动到不相关的地方？
+- [ ] 成功标准是什么？怎么验证？
+
+---
+
+## 7. OpenClawHarness 项目数字员工规范
+
+- **必读 CLAUDE.md**：`{项目根}/CLAUDE.md`
+- **技能清单**：本项目集成以下 OpenClaw 技能：
+  - `karpathy-guidelines`（⭐ 必读，编码原则）
+  - `self-improving-agent`（自我改进）
+  - `proactive-agent`（主动执行）
+
+---
+
+_本文件由 sync_to_harness.py 自动生成_
+_如需手动编辑，请保留此标记_
+
+
+---
+
+## 当前任务
+
+> 暂无进行中的任务。
+
+---
+
+## 任务历史
+
+| 时间 | 任务 | 状态 |
+|------|------|------|
+| - | - | - |
+
+---
+
+## 成功模式
+
+> 暂无成功模式记录。每次任务成功后会自动更新。
+
+---
+
+## 失败模式
+
+> 暂无失败模式记录。每次任务失败后会记录分析结果。
+
+---
+
+_本文件由 sync_to_harness.py 自动生成_
+_如需手动编辑，请保留此标记_
+
+## 当前项目
+
+| 属性 | 值 |
+|------|-----|
+| 项目名称 | XReport |
+| 项目路径 | `D:\project\aicoding\XReport` |
+| 项目类型 | Java (Maven/Gradle) |
+| 检测文件数 | 4401 |
+| 检测时间 | 2026-04-18 07:59:54 |
+
+> **⚠️ 重要**:每次任务前,必须先阅读 `D:\project\aicoding\XReport` 下的现有文件,
+> 理解当前项目状态后再决定如何执行任务。
+> 如果发现文件与项目类型不符(例如要开发 Java 后端却发现了 React 文件),
+> 立即停止并报告给用户。
+
+
+
+| 属性 | 值 |
+|------|-----|
+| 项目名称 | XReport |
+| 项目路径 | `D:\project\aicoding\XReport` |
+| 项目类型 | Java (Maven/Gradle) |
+| 检测文件数 | 4401 |
+| 检测时间 | 2026-04-18 07:59:52 |
+
+> **⚠️ 重要**:每次任务前,必须先阅读 `D:\project\aicoding\XReport` 下的现有文件,
+> 理解当前项目状态后再决定如何执行任务。
+> 如果发现文件与项目类型不符(例如要开发 Java 后端却发现了 React 文件),
+> 立即停止并报告给用户。
+
+```
+
+## 执行要求
+
+1. **先阅读上下文**:读取 `D:\project\aicoding\XReport/harness-context.md` 了解项目完整上下文
+2. **理解编码规则**:读取 `D:\project\aicoding\XReport/RULES.md` 了解必须遵守的规则
+3. **必读 Karpathy 编码原则**:读取 `D:\project\aicoding\XReport/CLAUDE.md`(27K+ stars 的 LLM 编码指南,⭐ 必读)
+4. **⭐ 自动驾驶自检**:在脑子里快速过一遍 CLAUDE.md 中的5条检查清单,确认方向正确后再动手。**不需要停下来问用户确认,直接分析+执行**。
+5. **分析任务**:拆解需求为可执行的任务项
+6. **执行开发**:使用 auto-dev orchestrator 执行开发
+7. **结果验证**:ESLint + TSC 必须通过
+8. **记录反馈**:成功/失败都要记录到 corrections/ 目录
+
+## 输出要求
+
+完成后请输出:
+1. 实际执行的任务列表
+2. 执行结果(成功/失败)
+3. 如果失败,说明原因和教训
+4. 代码变更摘要
+
+---
+生成时间:2026-04-18 07:59:54
